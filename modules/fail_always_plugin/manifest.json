@@ -1,0 +1,20 @@
+{
+    "id": "fail_always_plugin",
+    "name": "Fail Always",
+    "version": "1.1.0",
+    "icon_file": "icon.gif",
+    "author": "awenk audico ",
+    "email": "sahidinaola@gmail.com",
+    "website": "www.teetah.art",
+    "description": "The 'Fail Always' module is attempting to act...",
+    "type": "ACTION",
+    "entry_point": "processor.FailAlwaysPlugin",
+    "tier": "free",
+    "requires_services": [
+        "loc",
+        "logger",
+        "kernel"
+    ],
+    "permissions": [],
+    "output_schema": {}
+}
