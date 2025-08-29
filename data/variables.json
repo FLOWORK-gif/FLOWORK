@@ -1,0 +1,80 @@
+{
+    "GEMINI_API_KEY": {
+        "value": null,
+        "values": [
+            "YXNhc2FzYQ=="
+        ],
+        "mode": "random",
+        "is_secret": true,
+        "is_enabled": true,
+        "sequential_index": 0
+    },
+    "FLOWORK_API_KEY": {
+        "value": "I652SAQD77",
+        "is_secret": false,
+        "is_enabled": true,
+        "mode": "single",
+        "values": [],
+        "sequential_index": 0
+    },
+    "AKUNSOSMED": {
+        "value": null,
+        "values": [
+            "user_satu:password123",
+            "user_dua:password456",
+            "user_tiga:password789"
+        ],
+        "mode": "sequential",
+        "is_secret": false,
+        "is_enabled": true,
+        "sequential_index": 0
+    },
+    "SMTP_HOST": {
+        "value": "smtp.gmail.com",
+        "values": [],
+        "mode": "single",
+        "is_secret": false,
+        "is_enabled": true,
+        "sequential_index": 0
+    },
+    "SMTP_PORT": {
+        "value": "587",
+        "values": [],
+        "mode": "single",
+        "is_secret": false,
+        "is_enabled": true,
+        "sequential_index": 0
+    },
+    "IMAP_HOST": {
+        "value": "imap.gmail.com",
+        "values": [],
+        "mode": "single",
+        "is_secret": false,
+        "is_enabled": true,
+        "sequential_index": 0
+    },
+    "EMAIL_ADDRESS": {
+        "value": "youremail@GMAIL.COM",
+        "values": [],
+        "mode": "single",
+        "is_secret": false,
+        "is_enabled": true,
+        "sequential_index": 0
+    },
+    "EMAIL_PASSWORD": {
+        "value": "yourpass",
+        "values": [],
+        "mode": "single",
+        "is_secret": false,
+        "is_enabled": true,
+        "sequential_index": 0
+    },
+    "OPENAI_API_KEY": {
+        "value": "YXNhc2FzYQ==",
+        "values": [],
+        "mode": "single",
+        "is_secret": true,
+        "is_enabled": true,
+        "sequential_index": 0
+    }
+}
