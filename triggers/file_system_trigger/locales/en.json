@@ -1,0 +1,5 @@
+{
+    "file_system_trigger_name": "File System Trigger",
+    "file_system_trigger_desc": "Monitors a folder and automatically reacts to file activity. This trigger is your system's eyes and ears within the file explorer, ready to act on new files, changes, or deletions.",
+    "file_system_trigger_tutorial": "**Concept:**\nThis trigger uses a 'watchdog' to monitor a directory. When a specified activity occurs (e.g., a new file appears), it will immediately trigger a preset.\n\n**How to Use:**\n1. Drag & drop this trigger to the right.\n2. Click 'Browse...' to select the folder you want to watch.\n3. Check the relevant event types: 'On Created', 'On Modified', or 'On Deleted'. You can select more than one.\n4. Specify the Preset to be executed.\n\n**Optimization Examples:**\n- **Automated ETL:** Monitor an 'uploads' folder. Every time a new CSV file arrives, automatically run a workflow to read, process, and insert its data into a database.\n- **Image Conversion:** Watch a 'raw_images' folder. For every new .PNG file, trigger a workflow to convert it to .JPG and move it to another folder."
+}

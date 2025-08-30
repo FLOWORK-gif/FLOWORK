@@ -1,0 +1,69 @@
+{
+    "id": "email_reader_module",
+    "name": "Email Reader (IMAP)",
+    "version": "1.1",
+    "icon_file": "icon.png",
+    "author": "AWENK AUDICO",
+    "email": "contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Connects to an IMAP email server to find and read emails, and extract specific information like verification links or codes.",
+    "type": "ACTION",
+    "entry_point": "processor.EmailReaderModule",
+    "tier": "pro",
+    "behaviors": [
+        "retry"
+    ],
+    "requires_services": [
+        "logger",
+        "loc",
+        "kernel",
+        "variable_manager_service"
+    ],
+    "properties": [
+        {
+            "id": "search_from",
+            "type": "string",
+            "label": "loc.prop_email_reader_from_label",
+            "default": ""
+        },
+        {
+            "id": "search_subject",
+            "type": "string",
+            "label": "loc.prop_email_reader_subject_label",
+            "default": ""
+        },
+        {
+            "id": "mark_as_read",
+            "type": "boolean",
+            "label": "loc.prop_email_reader_mark_read_label",
+            "default": true
+        },
+        {
+            "id": "delete_after_read",
+            "type": "boolean",
+            "label": "loc.prop_email_reader_delete_label",
+            "default": false
+        }
+    ],
+    "output_ports": [
+        {
+            "name": "success",
+            "display_name": "Success"
+        },
+        {
+            "name": "not_found",
+            "display_name": "Email Not Found"
+        },
+        {
+            "name": "error",
+            "display_name": "Error"
+        }
+    ],
+    "output_schema": [
+        {
+            "name": "data.email_body",
+            "type": "string",
+            "description": "The entire plain text content of the found email."
+        }
+    ]
+}
