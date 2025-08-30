@@ -1,8 +1,0 @@
-{
-    "diagnostics_tab_title": "Diagnostik Sistem",
-    "diagnostics_copy_results_button": "Salin Hasil Scan",
-    "diagnostics_log_copied_success": "SUKSES: Laporan diagnostik disalin ke clipboard.",
-    "scan_title_generic_exception": "Memulai Pemindaian Pengecualian Generik",
-    "scan_title_unaudited_action": "Memulai Pemindaian Aksi Kritis Tanpa Audit",
-    "scan_title_phase_one_integrity": "Memulai Pemindaian Integritas Fase 1"
-}
