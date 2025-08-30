@@ -1,4 +1,0 @@
-diffusers
-torch
-transformers
-accelerate
