@@ -1,0 +1,5 @@
+{
+    "cron_trigger_name": "Time Trigger (Cron)",
+    "cron_trigger_desc": "Automatically executes a workflow based on a very specific and recurring time schedule. This is the backbone for all scheduled tasks, from daily reports to weekly maintenance.",
+    "cron_trigger_tutorial": "**Concept:**\nCron is an industry-standard task scheduler. You define the execution time using a pattern (e.g., 'every day at 5 PM', 'every Monday').\n\n**How to Use:**\n1. Drag & drop this trigger to the right panel to create a new Rule.\n2. In the editor window, use the interactive UI to set your schedule. Choose between 'Every X Minutes', 'Hourly', 'Daily', or 'Weekly'.\n3. Select the 'Preset to Run' from the dropdown list.\n4. Ensure 'Enable This Rule' is checked, then Save.\n\n**Optimization Examples:**\n- **Daily Reports:** Set to run 'Daily' at '09:00' to send a sales report email.\n- **Data Sync:** Schedule to run 'Every 30 Minutes' to fetch the latest data from an API."
+}
