@@ -1,0 +1,92 @@
+{
+    "nodes": [
+        {
+            "id": "6e3a3cfd-3277-4083-a2f0-737cc7b50cdf",
+            "name": "Advanced Web Scraper (Selenium)",
+            "x": 636.0,
+            "y": 178.0,
+            "description": "",
+            "module_id": "advanced_web_scraper_module_1a2b",
+            "config_values": {
+                "url_source_mode": "dynamic",
+                "target_url": "https://",
+                "url_source_variable": "data.prompt",
+                "extraction_rules": "judul_artikel: article.detail h1.detail__title [text]\nisi_artikel: article.detail .detail__body-text [text]",
+                "exclude_selectors": ".lihatjg\n.para_caption",
+                "wait_time": 5,
+                "headless_mode": true,
+                "use_cache": true,
+                "has_breakpoint": false,
+                "timeout_seconds": 0,
+                "retry_attempts": 0,
+                "retry_delay_seconds": 5,
+                "is_checkpoint": false,
+                "enable_loop": false,
+                "loop_type": "count",
+                "loop_iterations": 1,
+                "loop_condition_var": "",
+                "loop_condition_op": "==",
+                "loop_condition_val": "",
+                "enable_sleep": false,
+                "sleep_type": "static",
+                "static_duration": 1,
+                "random_min": 1,
+                "random_max": 5
+            }
+        },
+        {
+            "id": "998b5c70-84c5-4254-8012-4b8beaaeef55",
+            "name": "Tampilkan Output (Popup)",
+            "x": 935.0,
+            "y": 99.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {}
+        },
+        {
+            "id": "4531561d-b6d5-4faa-a4ee-498eefd34ac5",
+            "name": "Tampilkan Output (Popup)",
+            "x": 967.0,
+            "y": 295.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {}
+        },
+        {
+            "id": "receiver-node-1",
+            "name": "Prompt Receiver",
+            "x": 338.0,
+            "y": 186.0,
+            "description": "",
+            "module_id": "prompt_receiver_module",
+            "config_values": {}
+        }
+    ],
+    "connections": [
+        {
+            "id": "9a390dba-4427-4505-8ccb-dbf3eece9c54",
+            "from": "6e3a3cfd-3277-4083-a2f0-737cc7b50cdf",
+            "to": "998b5c70-84c5-4254-8012-4b8beaaeef55",
+            "source_port_name": "success",
+            "target_port_name": null,
+            "type": "data"
+        },
+        {
+            "id": "940fa540-7698-4945-9f3e-8b275edeb064",
+            "from": "6e3a3cfd-3277-4083-a2f0-737cc7b50cdf",
+            "to": "4531561d-b6d5-4faa-a4ee-498eefd34ac5",
+            "source_port_name": "error",
+            "target_port_name": null,
+            "type": "data"
+        },
+        {
+            "id": "dd6a6bfc-9ab3-426a-a9be-348845886a1a",
+            "from": "receiver-node-1",
+            "to": "6e3a3cfd-3277-4083-a2f0-737cc7b50cdf",
+            "source_port_name": "output",
+            "target_port_name": null,
+            "type": "output"
+        }
+    ],
+    "labels": []
+}

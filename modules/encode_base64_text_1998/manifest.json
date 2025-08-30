@@ -1,0 +1,45 @@
+{
+    "id": "encode_base64_text_1998",
+    "name": "Encode Base64 Text",
+    "version": "1.0",
+    "icon_file": "icon.png",
+    "author": "AWENK AUDICO",
+    "email": "contributor@teetah.art",
+    "website": "https://www.teetah.art",
+    "description": "Encodes a given string into Base64 format.",
+    "type": "ACTION",
+    "entry_point": "processor.EncodeBase64Text1998Module",
+    "behaviors": [
+        "loop",
+        "retry"
+    ],
+    "requires_services": [
+        "logger",
+        "loc"
+    ],
+    "properties": [
+        {
+            "id": "text_to_encode",
+            "type": "string",
+            "label": "Text to Encode",
+            "default": "data.text_asli"
+        }
+    ],
+    "output_ports": [
+        {
+            "name": "success",
+            "display_name": "Success"
+        },
+        {
+            "name": "error",
+            "display_name": "Error"
+        }
+    ],
+    "output_schema": [
+        {
+            "name": "data.encoded_text",
+            "type": "string",
+            "description": "The Base64 encoded result of the input text."
+        }
+    ]
+}
