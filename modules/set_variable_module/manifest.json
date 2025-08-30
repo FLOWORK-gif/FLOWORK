@@ -1,0 +1,42 @@
+{
+    "id": "set_variable_module",
+    "name": "Set Variables / START",
+    "version": "1.1.0",
+    "icon_file": "icon.png",
+    "author": "AWENK AUDICO",
+    "email": "Contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Sets initial values or modifies multiple variables in a single step. Often used as the starting point of a workflow.",
+    "type": "LOGIC",
+    "entry_point": "processor.SetVariableModule",
+    "tier": "free",
+    "behaviors": [
+        "retry",
+        "loop"
+    ],
+    "requires_services": [
+        "logger",
+        "loc",
+        "event_bus"
+    ],
+    "properties": [
+        {
+            "id": "variables",
+            "type": "list",
+            "label": "loc.prop_variables_label"
+        }
+    ],
+    "output_ports": [
+        {
+            "name": "success",
+            "display_name": "Success"
+        }
+    ],
+    "output_schema": [
+        {
+            "name": "[dynamic]",
+            "type": "any",
+            "description": "Output variables are generated dynamically based on the configuration in the properties."
+        }
+    ]
+}

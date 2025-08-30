@@ -1,0 +1,12 @@
+{
+    "prop_objective_source_mode_label": "Objective Source",
+    "prop_manual_objective_label": "Manual Objective / Prompt:",
+    "prop_objective_source_variable_label": "Get Objective from Variable:",
+    "prop_mode_manual": "Manual Input",
+    "prop_mode_dynamic": "From Payload",
+    "prop_extraction_mode_label": "Desired Output Format:",
+    "extraction_mode_summary": "Summary",
+    "extraction_mode_full_text": "Full Text",
+    "prop_wait_time_label": "Wait Time (seconds):",
+    "prop_headless_mode_label": "Run Headless"
+}
