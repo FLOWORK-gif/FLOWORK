@@ -1,0 +1,19 @@
+{
+    "id": "debug_popup_module",
+    "name": "Tampilkan Output (Popup)",
+    "icon_file": "icon.png",
+    "author": "AWENK AUDICO",
+    "email": "Contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Menampilkan seluruh isi variabel (payload) yang diterima dari node sebelumnya dalam sebuah jendela popup. Sangat berguna untuk debugging.",
+    "type": "LOGIC",
+    "entry_point": "processor.DebugPopupModule",
+    "properties": [],
+    "permissions": [
+        "ui_interaction"
+    ],
+    "requires_services": [
+        "logger",
+        "kernel"
+    ]
+}
