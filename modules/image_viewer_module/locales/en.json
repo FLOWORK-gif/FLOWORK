@@ -1,0 +1,8 @@
+{
+    "module_name": "Image Viewer",
+    "prop_image_source_mode_label": "Image Source Mode",
+    "prop_mode_dynamic": "Dynamic from Payload",
+    "prop_mode_manual": "Manual File Path",
+    "prop_image_path_variable_label": "Get Image Path from Variable:",
+    "prop_manual_image_path_label": "Image File Path:"
+}

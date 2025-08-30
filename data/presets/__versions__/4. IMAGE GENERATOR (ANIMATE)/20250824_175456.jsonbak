@@ -1,0 +1,140 @@
+{
+    "nodes": [
+        {
+            "id": "b2c0671b-3ae4-4e9d-af7b-75d05ac361eb",
+            "name": "Prompt Engineer",
+            "x": 418.0,
+            "y": 213.0,
+            "description": "",
+            "module_id": "prompt_engineer_module_a1b2",
+            "config_values": {
+                "input_variable": "data.prompt",
+                "ai_provider_id": "gemini_provider",
+                "target_persona": "An expert AI assistant",
+                "has_breakpoint": false,
+                "timeout_seconds": 0,
+                "retry_attempts": 0,
+                "retry_delay_seconds": 5,
+                "is_checkpoint": false,
+                "enable_loop": false,
+                "loop_type": "count",
+                "loop_iterations": 1,
+                "loop_condition_var": "",
+                "loop_condition_op": "==",
+                "loop_condition_val": "",
+                "enable_sleep": false,
+                "sleep_type": "static",
+                "static_duration": 1,
+                "random_min": 1,
+                "random_max": 5,
+                "__internal_node_id": "b2c0671b-3ae4-4e9d-af7b-75d05ac361eb"
+            }
+        },
+        {
+            "id": "32ebfc9c-e295-4f83-8160-c4ec3a2847e0",
+            "name": "Tampilkan Output (Popup)",
+            "x": 827.0,
+            "y": 331.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {}
+        },
+        {
+            "id": "8aa02cec-841c-48b5-a1cd-230fa498f907",
+            "name": "Stable Diffusion XL Image Generator",
+            "x": 785.0,
+            "y": 182.0,
+            "description": "",
+            "module_id": "stable_diffusion_xl_module",
+            "config_values": {
+                "model_folder": "ANIMATE",
+                "prompt_source_variable": "data.optimal_prompt",
+                "prompt": "",
+                "negative_prompt": "",
+                "output_folder": "C:/Users/User/Desktop",
+                "output_filename_prefix": "",
+                "width": 1024,
+                "height": 1024,
+                "guidance_scale": 7.5,
+                "num_inference_steps": 30,
+                "has_breakpoint": false,
+                "timeout_seconds": 0,
+                "retry_attempts": 0,
+                "retry_delay_seconds": 5,
+                "is_checkpoint": false
+            }
+        },
+        {
+            "id": "21983c8a-3a40-4037-974b-24a358becde5",
+            "name": "Tampilkan Output (Popup)",
+            "x": 1101.0,
+            "y": 112.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {
+                "__internal_node_id": "21983c8a-3a40-4037-974b-24a358becde5"
+            }
+        },
+        {
+            "id": "30f43045-540e-42d6-948c-6839660ce26a",
+            "name": "Tampilkan Output (Popup)",
+            "x": 1101.0,
+            "y": 279.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {}
+        },
+        {
+            "id": "receiver-node-1",
+            "name": "Prompt Receiver",
+            "x": 155.0,
+            "y": 212.0,
+            "description": "",
+            "module_id": "prompt_receiver_module",
+            "config_values": {}
+        }
+    ],
+    "connections": [
+        {
+            "id": "2827ef7c-9cf6-4d34-920b-248bbab24c5a",
+            "from": "b2c0671b-3ae4-4e9d-af7b-75d05ac361eb",
+            "to": "32ebfc9c-e295-4f83-8160-c4ec3a2847e0",
+            "source_port_name": "error",
+            "target_port_name": null,
+            "type": "data"
+        },
+        {
+            "id": "9ccbc7b9-85f0-4835-83a7-075e9131a4c2",
+            "from": "b2c0671b-3ae4-4e9d-af7b-75d05ac361eb",
+            "to": "8aa02cec-841c-48b5-a1cd-230fa498f907",
+            "source_port_name": "success",
+            "target_port_name": null,
+            "type": "data"
+        },
+        {
+            "id": "343e4890-c6aa-46da-a77c-e641847bedd0",
+            "from": "8aa02cec-841c-48b5-a1cd-230fa498f907",
+            "to": "21983c8a-3a40-4037-974b-24a358becde5",
+            "source_port_name": "success",
+            "target_port_name": null,
+            "type": "data"
+        },
+        {
+            "id": "4f0fed4d-c5e1-4bdc-ae50-a143ed861b5a",
+            "from": "8aa02cec-841c-48b5-a1cd-230fa498f907",
+            "to": "30f43045-540e-42d6-948c-6839660ce26a",
+            "source_port_name": "error",
+            "target_port_name": null,
+            "type": "data"
+        },
+        {
+            "id": "baf82082-42f2-4a4d-b420-a32a421319b0",
+            "from": "receiver-node-1",
+            "to": "b2c0671b-3ae4-4e9d-af7b-75d05ac361eb",
+            "source_port_name": "output",
+            "target_port_name": null,
+            "type": "output"
+        }
+    ],
+    "labels": []
+}
