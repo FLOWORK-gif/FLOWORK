@@ -1,0 +1,24 @@
+{
+    "id": "system_diagnostics_plugin",
+    "name": "System Diagnostics",
+    "version": "1.0",
+    "icon_file": "icon.png",
+    "author": "Flowork Dev Team",
+    "email": "Contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Menyediakan alat untuk pemeriksaan kesehatan sistem dan diagnostik otomatis.",
+    "type": "PLUGIN",
+    "entry_point": "processor.SystemDiagnosticsUIProvider",
+    "permissions": [
+        "ui_provider"
+    ],
+    "main_processor_file": "processor.py",
+    "dependencies_file": "",
+    "supported_languages": [],
+    "is_paused": false,
+    "requires_services": [
+        "kernel",
+        "loc",
+        "logger"
+    ]
+}

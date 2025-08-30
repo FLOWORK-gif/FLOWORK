@@ -1,0 +1,16 @@
+{
+    "module_name": "Email Reader (IMAP)",
+    "prop_email_reader_creds_title": "IMAP Credentials (from Global Variables)",
+    "prop_email_reader_server_var_label": "IMAP Server Variable:",
+    "prop_email_reader_user_var_label": "Email Username Variable:",
+    "prop_email_reader_pass_var_label": "Email Password Variable:",
+    "prop_email_reader_search_title": "Search Criteria (Leave empty to ignore)",
+    "prop_email_reader_from_label": "From Email Contains:",
+    "prop_email_reader_subject_label": "Subject Contains:",
+    "prop_email_reader_extract_title": "Content Extraction",
+    "prop_email_reader_regex_label": "Extraction Regex (to find link/code):",
+    "prop_email_reader_mark_read_label": "Mark email as read after processing",
+    "prop_email_reader_delete_label": "Delete email after processing",
+    "prop_email_reader_creds_info": "NOTE: This module automatically uses the IMAP_HOST, IMAP_USER, and IMAP_PASS variables from Settings > Variable Management.",
+    "prop_email_reader_options_title": "Post-Read Actions"
+}

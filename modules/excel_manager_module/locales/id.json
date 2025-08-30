@@ -1,0 +1,8 @@
+{"prop_operation_label": "Operasi:",
+    "op_read": "Baca dari File",
+    "op_write": "Tulis/Tambah ke File",
+    "prop_path_source_title": "Sumber Path File",
+    "prop_manual_path_label": "File Excel:",
+    "prop_sheet_name_label": "Nama Sheet (atau indeks 0, 1...):",
+    "prop_data_to_write_label": "Data untuk Ditulis (dari Variabel):"
+}

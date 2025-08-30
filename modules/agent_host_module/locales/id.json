@@ -1,0 +1,6 @@
+{
+    "module_name": "Induk Agen (Agent Host)",
+    "prop_agent_host_brain_label": "Otak Agen (Model AI):",
+    "prop_agent_host_objective_label": "Misi / Objective:",
+    "prop_agent_host_info": "Node ini tidak memiliki properti langsung. Konfigurasikan dengan menyambungkan node lain ke port 'Prompt', 'Brain', dan 'Tools' di kanvas."
+}
