@@ -1,0 +1,37 @@
+{
+    "nodes": [
+        {
+            "id": "ac09ff8a-7876-4a50-8e31-dd9aae06c955",
+            "name": "Tampilkan Output (Popup)",
+            "x": 733.0,
+            "y": 138.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {
+                "__internal_node_id": "ac09ff8a-7876-4a50-8e31-dd9aae06c955"
+            }
+        },
+        {
+            "id": "receiver-node-1",
+            "name": "Prompt Receiver",
+            "x": 430.0,
+            "y": 138.0,
+            "description": "",
+            "module_id": "prompt_receiver_module",
+            "config_values": {
+                "__internal_node_id": "receiver-node-1"
+            }
+        }
+    ],
+    "connections": [
+        {
+            "id": "8474a847-05b7-413c-8621-6fcd02bc91f1",
+            "from": "receiver-node-1",
+            "to": "ac09ff8a-7876-4a50-8e31-dd9aae06c955",
+            "source_port_name": "output",
+            "target_port_name": null,
+            "type": "output"
+        }
+    ],
+    "labels": []
+}
