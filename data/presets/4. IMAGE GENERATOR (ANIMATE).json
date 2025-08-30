@@ -1,0 +1,83 @@
+{
+    "nodes": [
+        {
+            "id": "8aa02cec-841c-48b5-a1cd-230fa498f907",
+            "name": "Stable Diffusion XL Image Generator",
+            "x": 785.0,
+            "y": 182.0,
+            "description": "",
+            "module_id": "stable_diffusion_xl_module",
+            "config_values": {
+                "model_folder": "ANIMATE",
+                "prompt_source_variable": "data.optimal_prompt",
+                "prompt": "",
+                "negative_prompt": "",
+                "output_folder": "C:/Users/User/Desktop",
+                "output_filename_prefix": "",
+                "width": 1024,
+                "height": 1024,
+                "guidance_scale": 7.5,
+                "num_inference_steps": 30,
+                "has_breakpoint": false,
+                "timeout_seconds": 0,
+                "retry_attempts": 0,
+                "retry_delay_seconds": 5,
+                "is_checkpoint": false
+            }
+        },
+        {
+            "id": "30f43045-540e-42d6-948c-6839660ce26a",
+            "name": "Tampilkan Output (Popup)",
+            "x": 1101.0,
+            "y": 279.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {}
+        },
+        {
+            "id": "receiver-node-1",
+            "name": "Prompt Receiver",
+            "x": 477.0,
+            "y": 202.0,
+            "description": "",
+            "module_id": "prompt_receiver_module",
+            "config_values": {}
+        },
+        {
+            "id": "50797cd3-6ff3-4ae9-a58e-3d5e40be06c7",
+            "name": "Image Viewer",
+            "x": 1178.0,
+            "y": 92.0,
+            "description": "",
+            "module_id": "image_viewer_module",
+            "config_values": {}
+        }
+    ],
+    "connections": [
+        {
+            "id": "4f0fed4d-c5e1-4bdc-ae50-a143ed861b5a",
+            "from": "8aa02cec-841c-48b5-a1cd-230fa498f907",
+            "to": "30f43045-540e-42d6-948c-6839660ce26a",
+            "source_port_name": "error",
+            "target_port_name": null,
+            "type": "data"
+        },
+        {
+            "id": "90ebfdd7-8ee2-440e-9799-e1e0faeb082f",
+            "from": "8aa02cec-841c-48b5-a1cd-230fa498f907",
+            "to": "50797cd3-6ff3-4ae9-a58e-3d5e40be06c7",
+            "source_port_name": "success",
+            "target_port_name": null,
+            "type": "output"
+        },
+        {
+            "id": "0285f80e-3939-4979-8d5f-06a129cb48d8",
+            "from": "receiver-node-1",
+            "to": "8aa02cec-841c-48b5-a1cd-230fa498f907",
+            "source_port_name": "output",
+            "target_port_name": null,
+            "type": "output"
+        }
+    ],
+    "labels": []
+}

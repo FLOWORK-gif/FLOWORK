@@ -1,0 +1,8 @@
+{
+    "diagnostics_tab_title": "System Diagnostics",
+    "diagnostics_copy_results_button": "Copy Scan Results",
+    "diagnostics_log_copied_success": "SUCCESS: Diagnostics report copied to clipboard.",
+    "scan_title_generic_exception": "Starting Generic Exception Raise Scan",
+    "scan_title_unaudited_action": "Starting Unaudited Critical Action Scan",
+    "scan_title_phase_one_integrity": "Starting Phase 1: Independence Integrity Scan"
+}
