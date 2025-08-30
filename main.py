@@ -3,7 +3,7 @@
 # EMAIL SAHIDINAOLA@GMAIL.COM
 # WEBSITE WWW.TEETAH.ART
 # File NAME : C:\FLOWORK\main.py
-# JUMLAH BARIS : 161 (PLUS PERBAIKAN)
+# JUMLAH BARIS : 161
 #######################################################################
 
 import sys
@@ -91,19 +91,6 @@ def run_headless_mode(kernel_instance, preset_to_run):
     kernel_instance.write_to_log("Headless execution finished. Application will be closed.", "INFO")
     kernel_instance.stop_all_services()
 if __name__ == "__main__":
-    # --- [FIX] START: Initialize a hidden root window for early popups ---
-    # This ensures that any messagebox call during startup has a valid parent.
-    try:
-        import ttkbootstrap as ttk
-        hidden_root = ttk.Window()
-        hidden_root.withdraw()
-    except Exception:
-        # Fallback if ttkbootstrap fails for some reason
-        import tkinter
-        hidden_root = tkinter.Tk()
-        hidden_root.withdraw()
-    # --- [FIX] END ---
-
     parser = argparse.ArgumentParser(description="Flowork - Universal Workflow Orchestrator.")
     parser.add_argument(
         '--run-preset',
@@ -161,11 +148,6 @@ if __name__ == "__main__":
     except (Exception, PermissionDeniedError) as e:
         messagebox.showerror("Fatal Startup Error", f"An unrecoverable error occurred during startup:\n\n{e}")
         sys.exit(1)
-    
-    # --- [FIX] Make sure to destroy the hidden root if we are not entering GUI mode ---
-    if args.run_preset or args.start_server:
-        hidden_root.destroy()
-
     if args.run_preset:
         run_headless_mode(kernel, args.run_preset)
     elif args.start_server:
@@ -177,9 +159,4 @@ if __name__ == "__main__":
             kernel.write_to_log("Server-only mode stopped by user.", "INFO")
             kernel.stop_all_services()
     else:
-        # If we enter GUI mode, we don't need the hidden_root anymore because MainWindow will take over.
-        # It's good practice to destroy it before starting the main loop of the new window,
-        # but since MainWindow creates a new Toplevel, it's generally safe.
-        # For cleanliness, we can destroy it.
-        hidden_root.destroy()
         run_gui_mode(kernel)

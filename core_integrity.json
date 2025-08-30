@@ -45,7 +45,7 @@
     "flowork_kernel/ui_shell/main_window.cp310-win_amd64.pyd": "baffcf2671ecd255a6fc3f90c4c54bdfe9a2a8c24da394f921f7ccd2fb27cc6b",
     "flowork_kernel/ui_shell/ui_components/menubar_manager.cp310-win_amd64.pyd": "f3791a69fba6a73b52f28827571124d62006d50e848c9659aceaa4b565747975",
     "launcher.py": "b9d11a48cf08555535b872bdfe4292c20fed4ca48b7d92e2dcd0aecd3da0e40b",
-    "main.py": "25a3126444eccd4a8f19f42d412b8aae31cabe9e9da8662433b2b5979756365b",
+    "main.py": "1e35db62d709ef87cc904e28b562e1e7f5dae13418013860c45df2a25bcf4bdb",
     "plugins/flowork_core_ui/marketplace_page.cp310-win_amd64.pyd": "a25c3fae8016ddc85395219e5c05a72c4468d5ddd420f58780ad5763464cdbcf",
     "plugins/flowork_core_ui/pricing_page.cp310-win_amd64.pyd": "d3a295cafb3fc969804e8036a094930b6197406470ec71da184efd982385bcb4",
     "plugins/flowork_core_ui/settings_components/license_management_frame.cp310-win_amd64.pyd": "c588cc787fb74986402a6012bcf7554ae2290896dcb2390e7ae1e421dc329765"
