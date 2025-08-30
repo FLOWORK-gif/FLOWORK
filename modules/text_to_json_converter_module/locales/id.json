@@ -1,0 +1,7 @@
+{
+    "module_name": "Konverter Teks ke JSON",
+    "prop_source_text_label": "Variabel Teks Sumber:",
+    "prop_line_delimiter_label": "Pemisah Baris (contoh: \\n untuk baris baru):",
+    "prop_value_delimiter_label": "Pemisah Nilai (contoh: , atau ;):",
+    "prop_key_names_label": "Nama Kunci (pisahkan dengan koma):"
+}
