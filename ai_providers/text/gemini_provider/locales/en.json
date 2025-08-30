@@ -1,3 +1,0 @@
-{
-    "gemini_text_generation_prompt_wrapper": "Generate a text response for this request: '{prompt}'"
-}
