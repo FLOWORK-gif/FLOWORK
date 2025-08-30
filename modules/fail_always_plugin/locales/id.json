@@ -1,0 +1,9 @@
+{
+  "module_fail_always_name": "Gagal Selalu (Plugin Tes)",
+  "fail_always_executing_message": "Modul 'Selalu Gagal' sedang mencoba beraksi...",
+  "fail_always_status_failing": "Memulai kegagalan...",
+  "fail_always_error_message": "Sengaja GAGAL! Ini adalah kesalahan yang disimulasikan.",
+  "fail_always_install_message": "Plugin 'Selalu Gagal' berhasil diinstal dan siap untuk merusak hari Anda.",
+  "fail_always_load_message": "Modul 'Selalu Gagal' dimuat dan siap untuk gagal.",
+  "fail_always_unload_message": "Modul 'Selalu Gagal' dinonaktifkan."
+}
