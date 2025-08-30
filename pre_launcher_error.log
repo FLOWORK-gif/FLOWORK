@@ -1,0 +1,16 @@
+Bootstrap script failed:
+Traceback (most recent call last):
+  File "C:\FLOWORK\scripts\bootstrap.py", line 58, in main
+    raise subprocess.CalledProcessError(process.returncode, command)
+subprocess.CalledProcessError: Command '['C:\\FLOWORK\\python\\python.exe', '-m', 'pip', 'install', '--no-cache-dir', '--no-warn-script-location', '-r', 'C:\\FLOWORK\\requirements.txt']' returned non-zero exit status 2.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\FLOWORK\scripts\bootstrap.py", line 79, in <module>
+    main()
+  File "C:\FLOWORK\scripts\bootstrap.py", line 76, in main
+    input("\nPress Enter to exit...")
+EOFError: EOF when reading a line
+
+
