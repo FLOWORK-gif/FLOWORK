@@ -1,0 +1,14 @@
+{
+    "module_name": "Advanced Web Scraper (Selenium)",
+    "prop_use_cache_label": "Use Cache",
+    "prop_use_cache_tooltip": "If checked, the scraper will save a local copy of the page to speed up subsequent runs on the same URL.",
+    "prop_url_source_mode_label": "Mode Sumber URL",
+    "prop_mode_manual": "Input Manual",
+    "prop_mode_dynamic": "Dari Variabel Payload",
+    "prop_target_url_label": "URL Target",
+    "prop_url_source_variable_label": "URL dari Variabel:",
+    "prop_extraction_rules_label": "Aturan Ekstraksi (nama_data: selector [opsi])",
+    "prop_exclude_selectors_label": "Kecualikan Selektor CSS (satu per baris)",
+    "prop_wait_time_label": "Waktu Tunggu (detik)",
+    "prop_headless_mode_label": "Jalankan Headless (Tanpa UI)"
+}
