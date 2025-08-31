@@ -1,6 +1,0 @@
-{
-    "language_name": "Bash Script",
-    "command": "bash",
-    "file_extension": ".sh",
-    "version_argument": "--version"
-}
