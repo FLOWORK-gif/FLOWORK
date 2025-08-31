@@ -1,6 +1,0 @@
---- Running Dependency Check ---
-[WARN] Required library 'pystray' not found. Installing...
-[SUCCESS] Library 'pystray' installed successfully.
-[WARN] Required library 'pyaudio' not found. Installing...
-[SUCCESS] Library 'PyAudio' installed successfully.
---- Dependency Check Finished ---
