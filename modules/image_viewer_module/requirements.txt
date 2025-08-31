@@ -1,2 +1,0 @@
-pillow<11
-ttkbootstrap>=1.14.1,<2.0.0
