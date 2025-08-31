@@ -1,0 +1,964 @@
+{
+    "training-llama-v2": [
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        },
+        {
+            "prompt": "apa itu flowork",
+            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
+        },
+        {
+            "prompt": "bagaimana cara kerja flowork",
+            "response": "Flowork bekerja dengan menggunakan kanvas visual di mana pengguna menempatkan 'node' (modul atau plugin) dan menghubungkannya untuk menciptakan alur kerja. Setiap node memiliki satu tugas spesifik. Alur kerja ini kemudian dapat dieksekusi baik melalui antarmuka grafis, dari command-line (headless), atau dipicu oleh API eksternal."
+        },
+        {
+            "prompt": "apa itu node di flowork",
+            "response": "Node adalah blok bangunan dasar dari sebuah alur kerja di Flowork. Setiap node mewakili satu unit tugas, seperti membaca file, mengirim email, atau menjalankan logika if/else. Node berasal dari Modul atau Plugin yang terinstal."
+        },
+        {
+            "prompt": "apa perbedaan modul dan plugin",
+            "response": "Secara fungsional, keduanya sama-sama merupakan node yang bisa digunakan di kanvas. Perbedaannya hanya pada kategorisasi di dalam toolbox untuk memudahkan pengguna. Modul biasanya untuk 'Logic' (logika internal alur kerja), sedangkan Plugin untuk 'Action' (berinteraksi dengan sistem luar)."
+        },
+        {
+            "prompt": "bagaimana cara menyimpan alur kerja",
+            "response": "Kamu bisa menyimpan alur kerja dengan mengklik tombol \"Save Workflow as Preset\" di atas area kanvas. Kamu akan diminta memasukkan nama untuk preset tersebut, yang kemudian akan disimpan sebagai file .json."
+        },
+        {
+            "prompt": "apa itu webhook di flowork",
+            "response": "Webhook adalah sebuah URL unik yang disediakan oleh Flowork untuk setiap preset. Ketika URL ini diakses dari aplikasi atau layanan lain dengan metode POST, alur kerja yang terkait akan otomatis berjalan. Ini memungkinkan integrasi dengan sistem eksternal."
+        },
+        {
+            "prompt": "bagaimana cara menjalankan alur kerja tanpa membuka aplikasi",
+            "response": "Kamu bisa menjalankannya dalam mode headless melalui command-line. Gunakan perintah seperti 'python main.py --run-preset NAMA_PRESET_ANDA'. Ini akan mengeksekusi alur kerja tanpa menampilkan antarmuka pengguna."
+        },
+        {
+            "prompt": "apa fungsi modul Advanced Web Scraper",
+            "response": "Modul Advanced Web Scraper digunakan untuk mengekstrak data dari situs web modern yang menggunakan JavaScript. Modul ini mengontrol browser secara otomatis (menggunakan Selenium) untuk memuat halaman sepenuhnya sebelum mengambil data berdasarkan aturan CSS selector yang diberikan."
+        },
+        {
+            "prompt": "apa itu AI Architect",
+            "response": "AI Architect adalah fitur premium yang memungkinkan kamu membuat kerangka alur kerja secara otomatis hanya dengan menuliskan perintah dalam bahasa natural. AI akan menganalisis permintaanmu dan membuat susunan node yang relevan di kanvas."
+        },
+        {
+            "prompt": "bagaimana cara menambahkan variabel global",
+            "response": "Variabel global atau 'secret' dapat ditambahkan melalui menu Settings > Variable & Secret Management. Variabel yang dibuat di sana dapat dipanggil di dalam node mana pun menggunakan format placeholder, contohnya {{vars.NAMA_VARIABEL_SAYA}}."
+        },
+        {
+            "prompt": "apa kegunaan widget di dashboard",
+            "response": "Widget di dashboard menyediakan alat bantu dan tampilan informasi dalam satu layar. Contohnya adalah Toolbox untuk memilih modul, Log Viewer untuk melihat log eksekusi, dan Dataset Manager untuk mengelola data pelatihan AI. Layout widget dapat diatur dan disimpan sesuai keinginan."
+        },
+        {
+            "prompt": "apa itu Time-Travel Debugger",
+            "response": "Time-Travel Debugger adalah fitur premium yang muncul setelah alur kerja selesai dieksekusi (jika diaktifkan). Fitur ini memungkinkan kamu untuk \"mundur\" ke setiap langkah koneksi dalam alur kerja dan melihat data (payload) yang lewat pada saat itu, sangat berguna untuk melacak kesalahan atau memahami alur data."
+        },
+        {
+            "prompt": "bagaimana cara membuat modul flowork sendiri",
+            "response": "Kamu bisa menggunakan fitur \"Module Generator\" yang ada di dalam tab AI Tools. Fitur ini menyediakan antarmuka visual untuk merancang properti UI dan logika 'execute' dari sebuah modul, lalu mengemasnya menjadi file .zip yang siap diinstal."
+        },
+        {
+            "prompt": "apa itu GGUF",
+            "response": "GGUF adalah format file yang digunakan untuk menyimpan dan menjalankan model bahasa besar (seperti Llama) secara efisien di komputer lokal. Flowork mendukung penggunaan model GGUF sebagai 'otak' untuk AI Agent atau untuk tugas-tugas AI lainnya."
+        },
+        {
+            "prompt": "apa fungsi modul Keyword Router",
+            "response": "Modul Keyword Router berfungsi seperti percabangan if/else. Ia akan memeriksa teks input dan mengarahkan alur kerja ke port output yang berbeda berdasarkan kata kunci yang ditemukan. Misalnya, jika teks mengandung kata \"error\", alur akan diarahkan ke port 'penanganan_error'."
+        }
+    ]
+}

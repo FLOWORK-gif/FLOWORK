@@ -1,0 +1,7 @@
+{
+    "module_name": "Text to JSON Converter",
+    "prop_source_text_label": "Source Text Variable:",
+    "prop_line_delimiter_label": "Line Delimiter (e.g., \\n for new line):",
+    "prop_value_delimiter_label": "Value Delimiter (e.g., , or ;):",
+    "prop_key_names_label": "Key Names (comma-separated):"
+}
