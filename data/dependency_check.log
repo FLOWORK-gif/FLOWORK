@@ -1,0 +1,5 @@
+--- Running Dependency Check ---
+[INFO] Library 'pystray' is already installed.
+[INFO] Library 'pyaudio' is already installed.
+[SUCCESS] All required dependencies are present.
+--- Dependency Check Finished ---
