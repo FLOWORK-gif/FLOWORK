@@ -14,7 +14,10 @@
   <a href="https://github.com/FLOWORK-gif/FLOWORK/releases/download/v1.0.0/Flowork_Installer_v1.0.1.exe" target="_blank"><img src="https://raw.githubusercontent.com/flowork-dev/asset/refs/heads/main/DOWNLOAD.png" alt="Download Flowork for Windows" height="45"></a>
 </p>
 <p align="center">
-  <a href="https://download.teetah.art" target="_blank"><img src="https://raw.githubusercontent.com/FLOWORK-gif/ASSET/refs/heads/main/DOWNLOAD-AI-MODELS.png" alt="Download Flowork for Windows" height="45"></a>
+  <a href="https://github.com/FLOWORK-gif/addon" target="_blank"><img src="https://raw.githubusercontent.com/FLOWORK-gif/ASSET/refs/heads/main/ADDON.png" alt="Browse Community Addons" height="45"></a>
+</p>
+<p align="center">
+  <a href="https://download.teetah.art" target="_blank"><img src="https://raw.githubusercontent.com/FLOWORK-gif/ASSET/refs/heads/main/DOWNLOAD-AI-MODELS.png" alt="Download AI Models" height="45"></a>
 </p>
 <p align="center">
   <img src="https://img.shields.io/github/v/release/awenkolayaudico/flowork?style=for-the-badge" alt="Latest Release">
@@ -191,6 +194,10 @@ Flowork consists of several types of extensible components:
 | **Trigger** | Listens for events and starts workflows automatically. | `Cron Trigger`, `File System Trigger` |
 | **AI Provider**| "Drivers" that connect Flowork to various AI models. | `Google Gemini`, `Local GGUF Model` |
 
+**Looking for more?** The power of Flowork grows with its community. Discover and share new Modules, Plugins, and Widgets in our central Community Addon repository.
+
+➡️ **[Explore Community Addons Here](https://github.com/FLOWORK-gif/addon)** ⬅️
+
 ---
 
 ### 💻 For Developers & Contributing
@@ -219,7 +226,6 @@ We welcome contributions! The best way to start is by creating your own module.
 </p>
 
 ---
------
 
 # Flowork Headless API v1: Developer & Integration Guide
 
