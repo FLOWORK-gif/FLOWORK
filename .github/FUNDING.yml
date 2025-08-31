@@ -1,9 +1,0 @@
-# Ini adalah platform model pendanaan yang didukung
-
-# Sponsori developer langsung di GitHub.
-# Ganti 'awenkolayaudico' jika username GitHub-mu atau organisasimu berbeda.
-github: [FLOWORK-gif]
-
-# Tambahkan link custom, dalam kasus ini untuk PayPal.
-# Kamu bisa menambahkan link donasi lain di sini (misal: Saweria, Trakteer, dll).
-custom: ['https://paypal.me/TeetahDev']
