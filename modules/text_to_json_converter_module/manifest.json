@@ -1,0 +1,69 @@
+{
+    "id": "text_to_json_converter_module",
+    "name": "Text to JSON Converter",
+    "version": "1.0.0",
+    "icon_file": "icon.png",
+    "author": "AWENK AUDICO & Gemini",
+    "email": "Contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Converts a plain text string into a structured list of JSON objects based on user-defined delimiters and keys.",
+    "type": "ACTION",
+    "entry_point": "processor.TextToJsonConverterModule",
+    "tier": "free",
+    "behaviors": [
+        "retry",
+        "loop"
+    ],
+    "requires_services": [
+        "logger",
+        "loc",
+        "kernel"
+    ],
+    "properties": [
+        {
+            "id": "source_text_variable",
+            "type": "string",
+            "label": "loc.prop_source_text_label",
+            "description": "The payload variable path containing the raw text to be converted.",
+            "default": "data.raw_text"
+        },
+        {
+            "id": "line_delimiter",
+            "type": "string",
+            "label": "loc.prop_line_delimiter_label",
+            "description": "The character that separates each record or line. Use '\\n' for new lines.",
+            "default": "\\n"
+        },
+        {
+            "id": "value_delimiter",
+            "type": "string",
+            "label": "loc.prop_value_delimiter_label",
+            "description": "The character that separates values within a single line.",
+            "default": ","
+        },
+        {
+            "id": "key_names",
+            "type": "string",
+            "label": "loc.prop_key_names_label",
+            "description": "A comma-separated list of key names for the JSON object.",
+            "default": "column1,column2,column3"
+        }
+    ],
+    "output_ports": [
+        {
+            "name": "success",
+            "display_name": "Success"
+        },
+        {
+            "name": "error",
+            "display_name": "Error"
+        }
+    ],
+    "output_schema": [
+        {
+            "name": "data.json_data",
+            "type": "list",
+            "description": "The resulting list of JSON objects after conversion."
+        }
+    ]
+}
