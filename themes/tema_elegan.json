@@ -1,0 +1,18 @@
+{
+  "name": "Tema Elegan",
+  "colors": {
+    "primary": "#673AB7",
+    "secondary": "#B39DDB",
+    "success": "#81C784",
+    "info": "#64B5F6",
+    "warning": "#FFD54F",
+    "danger": "#E57373",
+    "light": "#F5F5F5",
+    "dark": "#424242",
+    "bg": "#EEEEEE",
+    "fg": "#424242",
+    "selectbg": "#7E57C2",
+    "selectfg": "#FFFFFF",
+    "border": "#9575CD"
+  }
+}
