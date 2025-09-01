@@ -1,0 +1,5 @@
+PyAudio>=0.2.14,<0.3.0
+mss>=9.0.1,<10.0.0
+python-dotenv>=1.1.1,<2.0.0
+requests>=2.32.4,<3.0.0
+ttkbootstrap>=1.14.1,<2.0.0
