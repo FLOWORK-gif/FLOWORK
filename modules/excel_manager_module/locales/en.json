@@ -1,0 +1,8 @@
+{"prop_operation_label": "Operation:",
+    "op_read": "Read from File",
+    "op_write": "Write/Append to File",
+    "prop_path_source_title": "File Path Source",
+    "prop_manual_path_label": "Excel File:",
+    "prop_sheet_name_label": "Sheet Name (or index 0, 1...):",
+    "prop_data_to_write_label": "Data to Write (from Variable):"
+}

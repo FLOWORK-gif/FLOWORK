@@ -1,0 +1,18 @@
+{
+  "name": "Tema Netral",
+  "colors": {
+    "primary": "#78909C",
+    "secondary": "#B0BEC5",
+    "success": "#A5D6A7",
+    "info": "#90CAF9",
+    "warning": "#FFEB3B",
+    "danger": "#EF9A9A",
+    "light": "#eceff1",
+    "dark": "#455A64",
+    "bg": "#CFD8DC",
+    "fg": "#37474F",
+    "selectbg": "#607D8B",
+    "selectfg": "#ffffff",
+    "border": "#78909C"
+  }
+}
