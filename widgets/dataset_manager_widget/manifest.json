@@ -1,0 +1,14 @@
+{
+    "id": "dataset_manager_widget",
+    "name": "Dataset Manager",
+    "version": "1.0",
+    "icon_file": "icon.png",
+    "author": "AWENK AUDICO & Gemini",
+    "email": "contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "A widget to create, manage, and add data to fine-tuning datasets stored in the local database.",
+    "type": "DASHBOARD_WIDGET",
+    "entry_point": "dataset_manager_widget.DatasetManagerWidget",
+    "tier": "pro",
+    "is_system": true
+}

@@ -1,0 +1,6 @@
+{
+    "module_name": "Agent Host",
+    "prop_agent_host_brain_label": "Agent Brain (AI Model):",
+    "prop_agent_host_objective_label": "Objective:",
+    "prop_agent_host_info": "This node has no direct properties. Configure it by connecting other nodes to its 'Prompt', 'Brain', and 'Tools' ports on the canvas."
+}

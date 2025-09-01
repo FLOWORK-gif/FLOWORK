@@ -1,0 +1,101 @@
+{
+    "nodes": [
+        {
+            "id": "1fb46404-d7fb-47b3-b134-60136c43ce61",
+            "name": "Set Variables / START",
+            "x": 554.0,
+            "y": 200.0,
+            "description": "",
+            "module_id": "set_variable_module",
+            "config_values": {
+                "variables": [
+                    {
+                        "name": "prompt",
+                        "value": "jokowi",
+                        "type": "text"
+                    }
+                ],
+                "__internal_node_id": "1fb46404-d7fb-47b3-b134-60136c43ce61"
+            }
+        },
+        {
+            "id": "9055821b-d470-4d48-a8b3-a9be8a0e5708",
+            "name": "IF Condition",
+            "x": 872.0,
+            "y": 190.0,
+            "description": "",
+            "module_id": "if_module",
+            "config_values": {
+                "variable_to_check": "[dynamic]",
+                "comparison_operator": "contains",
+                "value_to_compare": "jokowi",
+                "has_breakpoint": false,
+                "timeout_seconds": 0,
+                "retry_attempts": 0,
+                "retry_delay_seconds": 5,
+                "is_checkpoint": false,
+                "enable_loop": false,
+                "loop_type": "count",
+                "loop_iterations": 1,
+                "loop_condition_var": "",
+                "loop_condition_op": "==",
+                "loop_condition_val": "",
+                "enable_sleep": false,
+                "sleep_type": "static",
+                "static_duration": 1,
+                "random_min": 1,
+                "random_max": 5,
+                "__internal_node_id": "9055821b-d470-4d48-a8b3-a9be8a0e5708"
+            }
+        },
+        {
+            "id": "202ac80d-77ae-4199-b7fc-165575e62e4b",
+            "name": "Tampilkan Output (Popup)",
+            "x": 1133.0,
+            "y": 118.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {
+                "__internal_node_id": "202ac80d-77ae-4199-b7fc-165575e62e4b"
+            }
+        },
+        {
+            "id": "f8076a45-b611-4e54-94e8-816d50a67646",
+            "name": "Tampilkan Output (Popup)",
+            "x": 1170.0,
+            "y": 335.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {
+                "__internal_node_id": "f8076a45-b611-4e54-94e8-816d50a67646"
+            }
+        }
+    ],
+    "connections": [
+        {
+            "id": "0b5d98bd-8e69-40fe-9c21-52b5accb2b80",
+            "from": "1fb46404-d7fb-47b3-b134-60136c43ce61",
+            "to": "9055821b-d470-4d48-a8b3-a9be8a0e5708",
+            "source_port_name": "success",
+            "target_port_name": null,
+            "type": "output"
+        },
+        {
+            "id": "179f45b5-1128-4657-81ba-bcfea61fcc48",
+            "from": "9055821b-d470-4d48-a8b3-a9be8a0e5708",
+            "to": "202ac80d-77ae-4199-b7fc-165575e62e4b",
+            "source_port_name": "true",
+            "target_port_name": null,
+            "type": "output"
+        },
+        {
+            "id": "41aa48d5-da4f-4402-81dd-867b07be9cbf",
+            "from": "9055821b-d470-4d48-a8b3-a9be8a0e5708",
+            "to": "f8076a45-b611-4e54-94e8-816d50a67646",
+            "source_port_name": "false",
+            "target_port_name": null,
+            "type": "output"
+        }
+    ],
+    "labels": []
+}
