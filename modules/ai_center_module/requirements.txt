@@ -1,3 +1,0 @@
-llama-cpp-python>=0.3.14,<0.4.0
-transformers>=4.54.1,<5.0.0
-ttkbootstrap>=1.14.1,<2.0.0
