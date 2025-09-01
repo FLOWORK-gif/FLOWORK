@@ -1,8 +1,0 @@
-{
-    "training-llama-v2": [
-        {
-            "prompt": "apa itu flowork",
-            "response": "Flowork adalah Platform Orkestrasi Alur Kerja Visual yang memungkinkan pengguna merancang, membangun, dan menjalankan proses otomatis secara visual dengan antarmuka \"seret dan lepas\" (drag-and-drop)."
-        }
-    ]
-}

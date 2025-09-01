@@ -1,8 +1,0 @@
-{
-  "fail_always_executing_message": "The 'Fail Always' module is attempting to act...",
-  "fail_always_status_failing": "Initiating failure...",
-  "fail_always_error_message": "Intentionally FAILED! This is a simulated error.",
-  "fail_always_install_message": "The 'Fail Always' plugin has been successfully installed and is ready to ruin your day.",
-  "fail_always_load_message": "The 'Fail Always' module is loaded and ready to fail.",
-  "fail_always_unload_message": "The 'Fail Always' module has been unloaded."
-}
