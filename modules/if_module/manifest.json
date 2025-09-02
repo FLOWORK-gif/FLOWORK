@@ -1,0 +1,57 @@
+{
+    "id": "if_module",
+    "name": "IF Condition",
+    "version": "1.1.0",
+    "icon_file": "icon.GIF",
+    "author": "awenk audico",
+    "email": "sahidinaola@gmail.com",
+    "website": "www.teetah.art",
+    "description": "Evaluates a condition and directs the workflow to the 'True' or 'False' branch based on the result.",
+    "type": "CONTROL_FLOW",
+    "entry_point": "processor.IfModule",
+    "tier": "free",
+    "behaviors": [
+        "retry",
+        "loop"
+    ],
+    "requires_input": true,
+    "requires_services": [
+        "logger",
+        "loc",
+        "kernel"
+    ],
+    "properties": [
+        {
+            "id": "variable_to_check",
+            "type": "string",
+            "label": "loc.prop_if_variable_label",
+            "description": "The dot-notation path to the variable within the payload to evaluate.",
+            "default": ""
+        },
+        {
+            "id": "comparison_operator",
+            "type": "enum",
+            "label": "loc.prop_if_operator_label",
+            "description": "The logical operator to use for the comparison.",
+            "default": "=="
+        },
+        {
+            "id": "value_to_compare",
+            "type": "string",
+            "label": "loc.prop_if_value_label",
+            "description": "The value to compare against the payload variable.",
+            "default": ""
+        }
+    ],
+    "output_ports": [
+        {
+            "name": "true",
+            "display_name": "loc.port_true"
+        },
+        {
+            "name": "false",
+            "display_name": "loc.port_false"
+        }
+    ],
+    "output_schema": []
+}
