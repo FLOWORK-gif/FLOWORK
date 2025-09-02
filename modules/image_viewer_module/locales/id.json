@@ -1,0 +1,8 @@
+{
+    "module_name": "Penampil Gambar",
+    "prop_image_source_mode_label": "Mode Sumber Gambar",
+    "prop_mode_dynamic": "Dinamis dari Payload",
+    "prop_mode_manual": "Path File Manual",
+    "prop_image_path_variable_label": "Ambil Path Gambar dari Variabel:",
+    "prop_manual_image_path_label": "Path File Gambar:"
+}

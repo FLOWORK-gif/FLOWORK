@@ -1,0 +1,13 @@
+{
+    "id": "log_viewer",
+    "name": "Log Eksekusi",
+    "version": "1.0",
+    "icon_file": "icon.png",
+    "author": "Flowork Core",
+    "email": "Contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Widget inti untuk menampilkan, memfilter, dan mengelola log eksekusi.",
+    "type": "DASHBOARD_WIDGET",
+    "entry_point": "log_viewer_widget.LogViewerWidget",
+    "is_system": true
+}
