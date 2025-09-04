@@ -1,0 +1,3 @@
+{
+    "gemini_text_generation_prompt_wrapper": "Hasilkan respons teks untuk permintaan ini: '{prompt}'"
+}
