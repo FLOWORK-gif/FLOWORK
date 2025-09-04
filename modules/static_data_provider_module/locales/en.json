@@ -1,0 +1,16 @@
+{
+    "module_name": "Static Data Provider",
+    "prop_data_list_label": "Data to Inject",
+    "prop_header_name": "Variable Name",
+    "prop_header_type": "Data Type",
+    "prop_header_value": "Value",
+    "prop_add_button": "Add Data",
+    "prop_browse_button": "Browse...",
+    "type_text": "Short Text",
+    "type_code": "Text/Code (Multi-line)",
+    "type_image_path": "Image Path",
+    "type_audio_path": "Audio Path",
+    "type_video_path": "Video Path",
+    "type_file_path": "Generic File Path",
+    "type_folder_path": "Folder Path"
+}
