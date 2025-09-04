@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/FLOWORK-gif/FLOWORK/releases/download/v1.0.0/Flowork_Installer_v1.0.1.exe" target="_blank"><img src="https://raw.githubusercontent.com/flowork-dev/asset/refs/heads/main/DOWNLOAD.png" alt="Download Flowork for Windows" height="45"></a>
+  <a href="https://github.com/FLOWORK-gif/FLOWORK/releases/download/FLOWORK_installer/Flowork_Installer.exe" target="_blank"><img src="https://raw.githubusercontent.com/flowork-dev/asset/refs/heads/main/DOWNLOAD.png" alt="Download Flowork for Windows" height="45"></a>
 </p>
 <p align="center">
   <a href="https://download.teetah.art" target="_blank"><img src="https://raw.githubusercontent.com/FLOWORK-gif/ASSET/refs/heads/main/DOWNLOAD-AI-MODELS.png" alt="Download Flowork for Windows" height="45"></a>
@@ -142,7 +142,7 @@ Flowork is built on a few simple but powerful ideas:
 Flowork is **100% portable**. No installation needed.
 
 <p align="center">
-  <a href="https://github.com/FLOWORK-gif/FLOWORK/releases/download/v1.0.0/Flowork_Installer_v1.0.1.exe" target="_blank">
+  <a href="https://github.com/FLOWORK-gif/FLOWORK/releases/download/FLOWORK_installer/Flowork_Installer.exe" target="_blank">
     <img src="https://raw.githubusercontent.com/flowork-dev/asset/refs/heads/main/DOWNLOAD.png" alt="Download Flowork for Windows" width="300">
   </a>
 </p>
@@ -213,7 +213,7 @@ We welcome contributions! The best way to start is by creating your own module.
 </p>
 
 <p align="center">
-  <a href="https://github.com/FLOWORK-gif/FLOWORK/releases/download/v1.0.0/Flowork_Installer_v1.0.1.exe" target="_blank">
+  <a href="https://github.com/FLOWORK-gif/FLOWORK/releases/download/FLOWORK_installer/Flowork_Installer.exe" target="_blank">
     <img src="https://raw.githubusercontent.com/flowork-dev/asset/refs/heads/main/DOWNLOAD.png" alt="Download Flowork for Windows" width="300">
   </a>
 </p>
