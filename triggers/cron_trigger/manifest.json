@@ -1,0 +1,10 @@
+{
+    "id": "cron_trigger",
+    "name_key": "cron_trigger_name",
+    "description_key": "cron_trigger_desc",
+    "tutorial_key": "cron_trigger_tutorial",
+    "version": "1.0",
+    "author": "Awenk Audico",
+    "type": "BACKGROUND_TRIGGER",
+    "config_ui_entry_point": "config_ui.CronConfigUI"
+}

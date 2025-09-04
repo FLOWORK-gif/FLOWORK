@@ -1,0 +1,13 @@
+{
+    "id": "widget_toolbox",
+    "name": "Toolbox Widget",
+    "version": "1.0",
+    "icon_file": "icon.png",
+    "author": "Flowork Core",
+    "email": "Contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Widget inti yang menampilkan semua widget lain yang tersedia untuk ditambahkan ke dashboard.",
+    "type": "DASHBOARD_WIDGET",
+    "entry_point": "widget_toolbox_widget.WidgetToolboxWidget",
+    "is_system": true
+}
