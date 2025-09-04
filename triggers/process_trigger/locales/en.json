@@ -1,5 +1,0 @@
-{
-    "process_trigger_name": "Application Process Trigger",
-    "process_trigger_desc": "A unique trigger that monitors other applications running on your computer. You can create automations that react to when a program, game, or other service is opened or closed.",
-    "process_trigger_tutorial": "**Concept:**\nThis trigger periodically checks the list of running processes on your operating system. If the process name you specify appears (starts) or disappears (stops), it will trigger a preset.\n\n**How to Use:**\n1. Create a new Rule.\n2. Enter the process name of the application, including its extension (e.g., `notepad.exe`, `chrome.exe`, `Spotify.exe`). You can see process names in the Task Manager (Windows) or Activity Monitor (Mac).\n3. Choose whether to trigger when the process 'Starts' or 'Stops'.\n4. Select the Preset to run.\n\n**Optimization Examples:**\n- **Gaming Mode:** When `valorant.exe` starts, trigger a workflow to mute notifications, open Discord, and dim your room lights.\n- **Productivity Mode:** When `Photoshop.exe` starts, run a preset that opens your last project folder and plays a focus playlist on Spotify."
-}

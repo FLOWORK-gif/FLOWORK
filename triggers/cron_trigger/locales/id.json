@@ -1,5 +1,0 @@
-{
-    "cron_trigger_name": "Pemicu Waktu (Cron)",
-    "cron_trigger_desc": "Menjalankan alur kerja secara otomatis berdasarkan jadwal waktu yang sangat spesifik dan berulang. Ini adalah tulang punggung untuk semua tugas terjadwal, mulai dari laporan harian hingga maintenance mingguan.",
-    "cron_trigger_tutorial": "**Konsep:**\nCron adalah penjadwal tugas standar industri. Anda mendefinisikan waktu eksekusi menggunakan pola (misal: 'setiap jam 5 sore', 'setiap hari Senin').\n\n**Cara Penggunaan:**\n1. Drag & drop trigger ini ke panel kanan untuk membuat Aturan baru.\n2. Di jendela editor, gunakan UI interaktif untuk mengatur jadwal. Pilih antara 'Setiap X Menit', 'Setiap Jam', 'Harian', atau 'Mingguan'.\n3. Pilih 'Preset yang Akan Dijalankan' dari daftar dropdown.\n4. Pastikan 'Aktifkan Aturan Ini' dicentang, lalu Simpan.\n\n**Contoh Optimasi:**\n- **Laporan Harian:** Atur untuk berjalan 'Harian' pada jam '09:00' untuk mengirim email laporan penjualan.\n- **Sinkronisasi Data:** Jadwalkan untuk berjalan 'Setiap 30 Menit' untuk mengambil data terbaru dari sebuah API."
-}
