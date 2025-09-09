@@ -1,0 +1,103 @@
+{
+    "nodes": [
+        {
+            "id": "b946d060-8e86-4caa-b84b-cacb98200140",
+            "name": "Tampilkan Output (Popup)",
+            "x": 850.0,
+            "y": 85.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {
+                "__internal_node_id": "b946d060-8e86-4caa-b84b-cacb98200140"
+            }
+        },
+        {
+            "id": "2042a996-d800-48bf-b7fe-0491813a5229",
+            "name": "Image Viewer",
+            "x": 855.0,
+            "y": 294.0,
+            "description": "",
+            "module_id": "image_viewer_module",
+            "config_values": {
+                "path_mode": "dynamic",
+                "image_path_variable": "data.GAMBAR",
+                "manual_image_path": "",
+                "has_breakpoint": false,
+                "timeout_seconds": 0,
+                "retry_attempts": 0,
+                "retry_delay_seconds": 5,
+                "is_checkpoint": false,
+                "__internal_node_id": "2042a996-d800-48bf-b7fe-0491813a5229"
+            }
+        },
+        {
+            "id": "e25e7ffa-22ef-495b-be7b-0779b39ccd1a",
+            "name": "Static Data Provider",
+            "x": 378.0,
+            "y": 173.0,
+            "description": "",
+            "module_id": "static_data_provider_module",
+            "config_values": {
+                "variables_to_set": [
+                    {
+                        "name": "PROM",
+                        "value": "C:/FLOWORK/data/generated_images/unnamed_file_20250901_032427.png",
+                        "type": "Image Path"
+                    },
+                    {
+                        "name": "GAMBAR",
+                        "value": "C:/Users/User/Desktop/Screenshot_2.png",
+                        "type": "Image Path"
+                    }
+                ],
+                "__internal_node_id": "e25e7ffa-22ef-495b-be7b-0779b39ccd1a"
+            }
+        },
+        {
+            "id": "b4ef3c5e-5a33-436f-af4b-4dcfe56603c9",
+            "name": "Image Viewer",
+            "x": 850.0,
+            "y": 191.0,
+            "description": "",
+            "module_id": "image_viewer_module",
+            "config_values": {
+                "path_mode": "dynamic",
+                "image_path_variable": "data.PROM",
+                "manual_image_path": "",
+                "has_breakpoint": false,
+                "timeout_seconds": 0,
+                "retry_attempts": 0,
+                "retry_delay_seconds": 5,
+                "is_checkpoint": false,
+                "__internal_node_id": "b4ef3c5e-5a33-436f-af4b-4dcfe56603c9"
+            }
+        }
+    ],
+    "connections": [
+        {
+            "id": "0d3951db-eb20-43e9-bd4a-6d12ed2a79f7",
+            "from": "e25e7ffa-22ef-495b-be7b-0779b39ccd1a",
+            "to": "b946d060-8e86-4caa-b84b-cacb98200140",
+            "source_port_name": "error",
+            "target_port_name": null,
+            "type": "output"
+        },
+        {
+            "id": "51a0f574-77c2-4ca9-a289-74295131e3ce",
+            "from": "e25e7ffa-22ef-495b-be7b-0779b39ccd1a",
+            "to": "2042a996-d800-48bf-b7fe-0491813a5229",
+            "source_port_name": "GAMBAR",
+            "target_port_name": null,
+            "type": "output"
+        },
+        {
+            "id": "dfbd4ee7-c4fc-48c0-a812-b64ba4b15b39",
+            "from": "e25e7ffa-22ef-495b-be7b-0779b39ccd1a",
+            "to": "b4ef3c5e-5a33-436f-af4b-4dcfe56603c9",
+            "source_port_name": "PROM",
+            "target_port_name": null,
+            "type": "output"
+        }
+    ],
+    "labels": []
+}
