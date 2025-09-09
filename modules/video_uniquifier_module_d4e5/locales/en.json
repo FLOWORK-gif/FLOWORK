@@ -1,0 +1,17 @@
+{
+    "module_name": "Video Uniquifier",
+    "prop_folders_title": "Folder Configuration",
+    "prop_source_folder_label": "Source Folder:",
+    "prop_output_folder_label": "Output Folder (optional, defaults to subfolder):",
+    "prop_mods_title": "Modification Settings",
+    "prop_enable_crop_label": "Enable Random Cropping",
+    "prop_crop_amount_label": "Max Crop Amount:",
+    "prop_pixels_label": "pixels",
+    "prop_enable_color_label": "Enable Random Color Jitter",
+    "prop_color_variation_label": "Max Color Variation:",
+    "prop_enable_flip_label": "Enable Random Horizontal Flip (50% chance)",
+    "prop_enable_noise_label": "Enable Subtle Random Noise",
+    "prop_noise_amount_label": "Noise Intensity:",
+    "prop_output_opts_title": "Output Options",
+    "prop_output_format_label": "Output Format:"
+}

@@ -1,0 +1,4 @@
+{
+    "module_debug_popup_name": "Tampilkan Output (Popup)",
+    "module_debug_popup_desc": "Menampilkan seluruh isi variabel (payload) yang diterima dari node sebelumnya dalam sebuah jendela popup. Sangat berguna untuk debugging."
+}

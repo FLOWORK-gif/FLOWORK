@@ -1,0 +1,10 @@
+{
+    "prop_objective_source_mode_label": "Sumber Misi (Objective)",
+    "prop_manual_objective_label": "Misi / Prompt Manual:",
+    "prop_objective_source_variable_label": "Ambil Misi dari Variabel:",
+    "prop_mode_manual": "Input Manual",
+    "prop_mode_dynamic": "Dari Payload",
+    "prop_max_steps_label": "Langkah Maksimal Agen:",
+    "prop_ai_brain_label": "Otak AI untuk Keputusan:",
+    "prop_headless_mode_label": "Jalankan Headless (Tanpa UI Browser)"
+}

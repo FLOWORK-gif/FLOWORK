@@ -1,0 +1,112 @@
+{
+    "id": "email_sender_module_b5c6",
+    "name": "Email Sender",
+    "version": "1.1.0",
+    "icon_file": "icon.png",
+    "author": "awenk audico",
+    "email": "sahidinaola@gmail.com",
+    "website": "www.teetah.art",
+    "description": "Sends an email via an SMTP server. The recipient, subject, and body can be configured or taken dynamically from the payload.",
+    "type": "ACTION",
+    "entry_point": "processor.EmailSenderModule",
+    "tier": "basic",
+    "behaviors": [
+        "retry",
+        "loop"
+    ],
+    "requires_services": [
+        "logger",
+        "loc",
+        "kernel"
+    ],
+    "properties": [
+        {
+            "id": "recipient_mode",
+            "type": "enum",
+            "options": [
+                "manual",
+                "dynamic"
+            ],
+            "label": "loc.prop_recipient_source_label",
+            "default": "manual"
+        },
+        {
+            "id": "recipient",
+            "type": "string",
+            "label": "loc.prop_recipient_manual_label",
+            "default": ""
+        },
+        {
+            "id": "recipient_variable",
+            "type": "string",
+            "label": "loc.prop_recipient_variable_label",
+            "default": "data.recipient"
+        },
+        {
+            "id": "subject_mode",
+            "type": "enum",
+            "options": [
+                "manual",
+                "dynamic"
+            ],
+            "label": "loc.prop_subject_source_label",
+            "default": "manual"
+        },
+        {
+            "id": "subject",
+            "type": "string",
+            "label": "loc.prop_subject_manual_label",
+            "default": ""
+        },
+        {
+            "id": "subject_variable",
+            "type": "string",
+            "label": "loc.prop_subject_variable_label",
+            "default": "data.subject"
+        },
+        {
+            "id": "body_mode",
+            "type": "enum",
+            "options": [
+                "manual",
+                "dynamic"
+            ],
+            "label": "loc.prop_body_source_label",
+            "default": "manual"
+        },
+        {
+            "id": "body",
+            "type": "textarea",
+            "label": "loc.prop_body_manual_label",
+            "default": ""
+        },
+        {
+            "id": "body_variable",
+            "type": "string",
+            "label": "loc.prop_body_variable_label",
+            "default": "data.body"
+        }
+    ],
+    "output_ports": [
+        {
+            "name": "success",
+            "display_name": "loc.port_success"
+        },
+        {
+            "name": "error",
+            "display_name": "loc.port_error"
+        }
+    ],
+    "output_schema": [
+        {
+            "name": "data.email_status",
+            "type": "string",
+            "description": "The status of the email sending operation, e.g., 'Sent successfully'."
+        },
+        {
+            "name": "data.recipient",
+            "type": "string",
+            "description": "The email address the email was sent to."
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "module_name": "Penjahit Video Storyboard",
+    "prop_storyboard_output_label": "Pengaturan Output",
+    "prop_storyboard_output_folder_label": "Folder Hasil (Output):",
+    "prop_storyboard_bg_music_label": "Musik Latar (DEPRECATED - Gunakan Folder):",
+    "prop_storyboard_sections_label": "Babak / Urutan Video",
+    "prop_storyboard_section_name_label": "Nama Babak:",
+    "prop_storyboard_add_section_button": "+ Tambah Babak",
+    "prop_storyboard_generation_mode_label": "Mode Generasi Video:",
+    "mode_match_largest": "Maksimalkan Jumlah (Looping klip pendek)",
+    "mode_limit_by_smallest": "Jaga Keunikan (Batas folder terkecil)",
+    "prop_stitcher_delete_after_use_label": "Hapus klip setelah digunakan",
+    "prop_storyboard_section_default_name": "Babak",
+    "prop_storyboard_output_prefix_label": "Awalan Nama File Output:",
+    "prop_storyboard_music_folder_label": "Folder Musik Latar (Opsional):",
+    "prop_storyboard_music_volume_label": "Volume Musik Baru (%):",
+    "prop_storyboard_original_audio_mode_label": "Audio Klip Asli:",
+    "audio_mode_replace": "Ganti",
+    "audio_mode_merge": "Gabung dengan BGM",
+    "prop_storyboard_original_audio_volume_label": "Volume Audio Asli (%):"
+}

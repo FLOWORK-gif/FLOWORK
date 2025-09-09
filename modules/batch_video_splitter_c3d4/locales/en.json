@@ -1,0 +1,8 @@
+{
+    "module_name": "Pemotong Video Massal (Batch)",
+    "prop_splitter_source_folder_label": "Folder Sumber:",
+    "prop_splitter_output_folder_label": "Folder Hasil:",
+    "prop_splitter_segment_duration_label": "Durasi Setiap Potongan (detik):",
+    "prop_splitter_add_pair_button": "+ Tambah Pasangan Folder",
+    "prop_splitter_folder_pairs_label": "Pasangan Folder (Sumber -> Hasil)"
+}

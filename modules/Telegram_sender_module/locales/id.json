@@ -1,0 +1,15 @@
+{
+    "module_name": "Pengirim Telegram",
+    "prop_chat_id_source_label": "Sumber Chat ID",
+    "prop_manual_chat_id_label": "Chat ID (Manual):",
+    "prop_dynamic_chat_id_label": "Ambil Chat ID dari Variabel:",
+    "prop_content_source_label": "Sumber Konten",
+    "prop_manual_content_label": "Isi Pesan (Manual):",
+    "prop_dynamic_content_label": "Ambil Isi Pesan dari Variabel:",
+    "prop_file_path_label": "Path File Lampiran (dari Variabel):",
+    "prop_mode_manual": "Input Manual",
+    "prop_mode_dynamic": "Dari Variabel Payload",
+    "prop_telegram_info_text": "Modul ini menggunakan TELEGRAM_BOT_TOKEN dan TELEGRAM_CHAT_ID dari Pengaturan global Anda. Anda bisa secara opsional menimpa penerima di bawah ini.",
+    "prop_recipient_override_title": "Timpa Penerima (Opsional)",
+    "prop_recipient_override_label": "Ambil Penerima dari Variabel:"
+}

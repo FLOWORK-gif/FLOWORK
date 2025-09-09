@@ -1,0 +1,87 @@
+{
+    "id": "intelligent_content_extractor",
+    "name": "Agentic Web Scraper",
+    "version": "3.0",
+    "icon_file": "icon.png",
+    "author": "AWENK AUDICO",
+    "email": "contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Deploys an autonomous AI agent to navigate websites, interact with elements, and extract information to fulfill a high-level objective.",
+    "type": "ACTION",
+    "entry_point": "processor.IntelligentContentExtractorModule",
+    "tier": "architect",
+    "behaviors": [
+        "retry"
+    ],
+    "requires_services": [
+        "logger",
+        "loc",
+        "kernel"
+    ],
+    "properties": [
+        {
+            "id": "objective_source_mode",
+            "type": "enum",
+            "label": "loc.prop_objective_source_mode_label",
+            "options": [
+                "manual",
+                "dynamic"
+            ],
+            "default": "manual"
+        },
+        {
+            "id": "manual_objective",
+            "type": "textarea",
+            "label": "loc.prop_manual_objective_label",
+            "default": "Find the top 3 latest news about AI technology from detik.com"
+        },
+        {
+            "id": "objective_source_variable",
+            "type": "string",
+            "label": "loc.prop_objective_source_variable_label",
+            "default": "data.prompt"
+        },
+        {
+            "id": "max_steps",
+            "type": "integer",
+            "label": "loc.prop_max_steps_label",
+            "description": "Maximum number of actions the agent can take to prevent infinite loops.",
+            "default": 10
+        },
+        {
+            "id": "ai_brain_endpoint",
+            "type": "enum",
+            "label": "loc.prop_ai_brain_label",
+            "description": "The AI model that will act as the agent's brain for decision making.",
+            "default": ""
+        },
+        {
+            "id": "headless_mode",
+            "type": "boolean",
+            "label": "loc.prop_headless_mode_label",
+            "default": true
+        }
+    ],
+    "output_ports": [
+        {
+            "name": "success",
+            "display_name": "Success"
+        },
+        {
+            "name": "error",
+            "display_name": "Error"
+        }
+    ],
+    "output_schema": [
+        {
+            "name": "data.agent_final_answer",
+            "type": "string",
+            "description": "The final processed information extracted by the AI agent."
+        },
+        {
+            "name": "data.interaction_log",
+            "type": "list",
+            "description": "A step-by-step log of the agent's actions and observations."
+        }
+    ]
+}

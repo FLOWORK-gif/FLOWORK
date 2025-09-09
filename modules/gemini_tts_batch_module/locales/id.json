@@ -1,0 +1,12 @@
+{
+    "module_name": "Gemini TTS (Batch)",
+    "prop_tts_input_source_label": "Sumber Data Input:",
+    "prop_tts_source_csv_label": "File CSV Sumber (untuk mode CSV)",
+    "prop_tts_payload_variable_label": "Variabel Payload (untuk mode Payload)",
+    "prop_tts_text_column_label": "Nama Kolom/Key Teks:",
+    "prop_tts_status_column_label": "Nama Kolom Status (hanya mode CSV):",
+    "prop_tts_output_folder_label": "Folder Output untuk Audio",
+    "prop_tts_voice_model_label": "Model Suara:",
+    "input_mode_csv": "Dari File CSV",
+    "input_mode_payload": "Dari Payload"
+}

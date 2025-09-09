@@ -1,0 +1,23 @@
+{
+    "prop_stitcher_job_list_label": "Batch Job List",
+    "prop_stitcher_add_job_button": "+ Add Job",
+    "prop_stitcher_video_folder_header": "Video Source Folder",
+    "prop_stitcher_audio_folder_header": "Audio Source Folder",
+    "prop_stitcher_output_folder_header": "Output Folder",
+    "prop_stitcher_add_subtitles_label": "Automatically Generate and Burn Subtitles (AI)",
+    "prop_stitcher_subtitle_settings_label": "Subtitle Settings",
+    "prop_stitcher_subtitle_model_size_label": "Subtitle AI Model:",
+    "prop_stitcher_subtitle_effect_label": "Subtitle Effect:",
+    "prop_stitcher_subtitle_font_label": "Subtitle Font:",
+    "prop_stitcher_subtitle_font_size_label": "Font Size:",
+    "prop_stitcher_subtitle_primary_color_label": "Primary Color:",
+    "prop_stitcher_subtitle_secondary_color_label": "Highlight Color:",
+    "prop_stitcher_subtitle_style_label": "Font Style:",
+    "prop_stitcher_duration_reference_label": "Mode Referensi Durasi:",
+    "duration_ref_audio": "Audio sebagai Master",
+    "duration_ref_video": "Video sebagai Master",
+    "prop_stitcher_original_audio_mode_label": "Audio Asli Video:",
+    "audio_mode_replace": "Ganti Total dengan Audio Baru",
+    "audio_mode_merge": "Gabung dengan Audio Baru",
+    "prop_stitcher_original_audio_volume_label": "Volume Audio Asli (%):"
+}

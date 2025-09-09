@@ -1,0 +1,10 @@
+{
+    "prop_objective_source_mode_label": "Objective Source",
+    "prop_manual_objective_label": "Manual Objective / Prompt:",
+    "prop_objective_source_variable_label": "Get Objective from Variable:",
+    "prop_mode_manual": "Manual Input",
+    "prop_mode_dynamic": "From Payload",
+    "prop_max_steps_label": "Max Agent Steps:",
+    "prop_ai_brain_label": "AI Brain for Decisions:",
+    "prop_headless_mode_label": "Run Headless (No Browser UI)"
+}

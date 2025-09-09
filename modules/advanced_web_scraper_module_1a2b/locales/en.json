@@ -1,0 +1,14 @@
+{
+    "module_name": "Advanced Web Scraper (Selenium)",
+    "prop_use_cache_label": "Use Cache",
+    "prop_use_cache_tooltip": "If checked, the scraper will save a local copy of the page to speed up subsequent runs on the same URL.",
+    "prop_url_source_mode_label": "URL Source Mode",
+    "prop_mode_manual": "Manual Input",
+    "prop_mode_dynamic": "From Payload Variable",
+    "prop_target_url_label": "Target URL",
+    "prop_url_source_variable_label": "URL from Variable:",
+    "prop_extraction_rules_label": "Extraction Rules (data_name: selector [option])",
+    "prop_exclude_selectors_label": "Exclude CSS Selectors (one per line)",
+    "prop_wait_time_label": "Wait Time (seconds)",
+    "prop_headless_mode_label": "Run Headless (No UI)"
+}

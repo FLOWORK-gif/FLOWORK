@@ -1,0 +1,95 @@
+{
+    "id": "gemini_tts_batch_module",
+    "name": "Gemini TTS (Batch from CSV)",
+    "version": "2.0",
+    "icon_file": "icon.png",
+    "author": "AWENK AUDICO & Gemini",
+    "email": "contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Reads a list of texts from a CSV file or payload, converts each text to speech using Google Gemini, saves them as audio files, and updates the CSV with the status if applicable.",
+    "type": "ACTION",
+    "tier": "pro",
+    "entry_point": "processor.GeminiTtsBatchModule",
+    "behaviors": [
+        "retry"
+    ],
+    "requires_services": [
+        "logger",
+        "loc",
+        "kernel",
+        "variable_manager_service"
+    ],
+    "requires_variables": [
+        {
+            "name": "GEMINI_API_KEY",
+            "description": "Your API Key from Google AI Studio to access Gemini models.",
+            "is_secret": true
+        }
+    ],
+    "properties": [
+        {
+            "id": "input_source_mode",
+            "type": "enum",
+            "label": "loc.prop_tts_input_source_label",
+            "options": ["csv", "payload"],
+            "default": "csv"
+        },
+        {
+            "id": "source_csv_path",
+            "type": "filepath",
+            "label": "loc.prop_tts_source_csv_label"
+        },
+        {
+            "id": "payload_variable",
+            "type": "string",
+            "label": "loc.prop_tts_payload_variable_label",
+            "default": "data.texts_to_process"
+        },
+        {
+            "id": "text_column_name",
+            "type": "string",
+            "label": "loc.prop_tts_text_column_label",
+            "default": "text"
+        },
+        {
+            "id": "status_column_name",
+            "type": "string",
+            "label": "loc.prop_tts_status_column_label",
+            "default": "status"
+        },
+        {
+            "id": "output_folder",
+            "type": "folderpath",
+            "label": "loc.prop_tts_output_folder_label"
+        },
+        {
+            "id": "voice_model",
+            "type": "enum",
+            "label": "loc.prop_tts_voice_model_label",
+            "options": ["Zephyr", "Puck", "Aura", "Lyra", "Luna", "Titan"],
+            "default": "Zephyr"
+        }
+    ],
+    "output_ports": [
+        {
+            "name": "success",
+            "display_name": "Success"
+        },
+        {
+            "name": "error",
+            "display_name": "Error"
+        }
+    ],
+    "output_schema": [
+        {
+            "name": "data.tts_results",
+            "type": "list",
+            "description": "A list of dictionaries, each containing the original text, the path to the generated audio file, and the status."
+        },
+        {
+            "name": "data.total_processed",
+            "type": "integer",
+            "description": "The total number of audio files successfully generated in this run."
+        }
+    ]
+}

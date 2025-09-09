@@ -1,0 +1,4 @@
+{
+    "widget_prompt_sender_name": "Pengirim Prompt",
+    "widget_prompt_sender_desc": "Widget dashboard untuk mengirimkan prompt teks dan path file opsional ke modul penerima spesifik dalam sebuah alur kerja."
+}

@@ -1,0 +1,210 @@
+{
+    "nodes": [
+        {
+            "id": "3343d31a-a9f7-4000-8e0a-de191d7e1535",
+            "name": "Batch Video Splitter",
+            "x": 647.0,
+            "y": 199.0,
+            "description": "",
+            "module_id": "batch_video_splitter_c3d4",
+            "config_values": {
+                "segment_duration": 2,
+                "folder_pairs": [
+                    {
+                        "source": "C:/Users/User/Desktop/JOB_1/PART_1",
+                        "output": "C:/Users/User/Desktop/JOB_2/VIDEO/PART_1"
+                    },
+                    {
+                        "source": "C:/Users/User/Desktop/JOB_1/PART_2",
+                        "output": "C:/Users/User/Desktop/JOB_2/VIDEO/PART_2"
+                    },
+                    {
+                        "source": "C:/Users/User/Desktop/JOB_1/PART_3",
+                        "output": "C:/Users/User/Desktop/JOB_2/VIDEO/PART_3"
+                    },
+                    {
+                        "source": "C:/Users/User/Desktop/JOB_1/PART_4",
+                        "output": "C:/Users/User/Desktop/JOB_2/VIDEO/PART_4"
+                    }
+                ],
+                "has_breakpoint": false,
+                "timeout_seconds": 0,
+                "retry_attempts": 0,
+                "retry_delay_seconds": 5,
+                "is_checkpoint": false,
+                "__internal_node_id": "3343d31a-a9f7-4000-8e0a-de191d7e1535"
+            }
+        },
+        {
+            "id": "94a96b39-cf7a-4c45-b843-90e833faae06",
+            "name": "Dynamic Media Stitcher",
+            "x": 942.0,
+            "y": 195.0,
+            "description": "",
+            "module_id": "Dynamic Media Stitcher",
+            "config_values": {
+                "job_list": [
+                    {
+                        "video_folder": "C:/Users/User/Desktop/JOB_2/VIDEO/PART_1",
+                        "audio_folder": "C:/Users/User/Desktop/JOB_2/AUDICO/PART_1",
+                        "output_folder": "C:/Users/User/Desktop/JOB_3/PART_1"
+                    },
+                    {
+                        "video_folder": "C:/Users/User/Desktop/JOB_2/VIDEO/PART_2",
+                        "audio_folder": "C:/Users/User/Desktop/JOB_2/AUDICO/PART_2",
+                        "output_folder": "C:/Users/User/Desktop/JOB_3/PART_2"
+                    },
+                    {
+                        "video_folder": "C:/Users/User/Desktop/JOB_2/VIDEO/PART_3",
+                        "audio_folder": "C:/Users/User/Desktop/JOB_2/AUDICO/PART_3",
+                        "output_folder": "C:/Users/User/Desktop/JOB_3/PART_3"
+                    },
+                    {
+                        "video_folder": "C:/Users/User/Desktop/JOB_2/VIDEO/PART_4",
+                        "audio_folder": "C:/Users/User/Desktop/JOB_2/AUDICO/PART_4",
+                        "output_folder": "C:/Users/User/Desktop/JOB_3/PART_4"
+                    }
+                ],
+                "duration_reference": "audio",
+                "original_audio_mode": "replace",
+                "original_audio_volume": 20,
+                "add_subtitles": true,
+                "correction_dictionary": "flowwork: Flowork\nflo work: Flowork\nFLOYOK: Flowork\nFLOW WORK: Flowork",
+                "subtitle_model_size": "base",
+                "subtitle_font": "Default",
+                "subtitle_primary_color": "#FFFFFF",
+                "subtitle_secondary_color": "#FFFF00",
+                "subtitle_font_size": 12,
+                "subtitle_style": "Shadow",
+                "has_breakpoint": false,
+                "timeout_seconds": 0,
+                "retry_attempts": 0,
+                "retry_delay_seconds": 5,
+                "is_checkpoint": false
+            }
+        },
+        {
+            "id": "c22b6754-b3f7-4cb9-857d-75988a8bc9c8",
+            "name": "Video Storyboard Stitcher",
+            "x": 1250.0,
+            "y": 184.0,
+            "description": "",
+            "module_id": "video_storyboard_stitcher_d5e6",
+            "config_values": {
+                "output_folder": "C:/Users/User/Desktop/JOB_4",
+                "output_filename_prefix": "storyboard_video",
+                "music_folder_path": "C:/Users/User/Desktop/MUSIK",
+                "music_volume_percent": 20,
+                "original_audio_mode": "merge",
+                "original_audio_volume": 80,
+                "generation_mode": "Maksimalkan Jumlah (Looping klip pendek)",
+                "delete_after_use": false,
+                "video_sections": [
+                    {
+                        "name": "Babak 1",
+                        "path": "C:/Users/User/Desktop/JOB_3/PART_1"
+                    },
+                    {
+                        "name": "Babak 2",
+                        "path": "C:/Users/User/Desktop/JOB_3/PART_2"
+                    },
+                    {
+                        "name": "Babak 3",
+                        "path": "C:/Users/User/Desktop/JOB_3/PART_3"
+                    },
+                    {
+                        "name": "Babak 4",
+                        "path": "C:/Users/User/Desktop/JOB_3/PART_4"
+                    }
+                ]
+            }
+        },
+        {
+            "id": "bd67c3a0-7d57-4e90-84e2-060138ef77b3",
+            "name": "POPUP DEBUGING",
+            "x": 918.0,
+            "y": 294.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {}
+        },
+        {
+            "id": "e7cfcfe0-acba-4b7b-a656-80dc24d7f82b",
+            "name": "POPUP DEBUGING",
+            "x": 1189.0,
+            "y": 300.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {}
+        },
+        {
+            "id": "96f24c29-8ab8-407e-94d1-79f50ca66055",
+            "name": "POPUP DEBUGING",
+            "x": 1462.0,
+            "y": 284.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {}
+        },
+        {
+            "id": "b3c2ae2f-ca2c-4634-9b5c-805987712598",
+            "name": "POPUP DEBUGING",
+            "x": 1563.0,
+            "y": 104.0,
+            "description": "",
+            "module_id": "debug_popup_module",
+            "config_values": {}
+        }
+    ],
+    "connections": [
+        {
+            "id": "f0cb7b9f-fda0-4ff6-aa99-7084c10514d2",
+            "from": "3343d31a-a9f7-4000-8e0a-de191d7e1535",
+            "to": "bd67c3a0-7d57-4e90-84e2-060138ef77b3",
+            "source_port_name": "error",
+            "target_port_name": null,
+            "type": "output"
+        },
+        {
+            "id": "cda3a147-b64d-4562-8d7e-0e9118d759e0",
+            "from": "c22b6754-b3f7-4cb9-857d-75988a8bc9c8",
+            "to": "96f24c29-8ab8-407e-94d1-79f50ca66055",
+            "source_port_name": "error",
+            "target_port_name": null,
+            "type": "output"
+        },
+        {
+            "id": "835af7b3-187a-4483-b6be-a313ffc6ee44",
+            "from": "c22b6754-b3f7-4cb9-857d-75988a8bc9c8",
+            "to": "b3c2ae2f-ca2c-4634-9b5c-805987712598",
+            "source_port_name": "success",
+            "target_port_name": null,
+            "type": "output"
+        },
+        {
+            "id": "71e453c9-c1b7-4279-bc6c-499dcdaf3262",
+            "from": "3343d31a-a9f7-4000-8e0a-de191d7e1535",
+            "to": "94a96b39-cf7a-4c45-b843-90e833faae06",
+            "source_port_name": "success",
+            "target_port_name": null,
+            "type": "output"
+        },
+        {
+            "id": "1d466328-31d5-42dc-a198-b0df0f818050",
+            "from": "94a96b39-cf7a-4c45-b843-90e833faae06",
+            "to": "e7cfcfe0-acba-4b7b-a656-80dc24d7f82b",
+            "source_port_name": "error",
+            "target_port_name": null,
+            "type": "output"
+        },
+        {
+            "id": "395de3f3-57fe-4956-b62c-7164de0b6195",
+            "from": "94a96b39-cf7a-4c45-b843-90e833faae06",
+            "to": "c22b6754-b3f7-4cb9-857d-75988a8bc9c8",
+            "source_port_name": "success",
+            "target_port_name": null,
+            "type": "output"
+        }
+    ],
+    "labels": []
+}

@@ -1,0 +1,8 @@
+{
+    "module_name": "Batch Video Splitter",
+    "prop_splitter_source_folder_label": "Source Folder:",
+    "prop_splitter_output_folder_label": "Output Folder:",
+    "prop_splitter_segment_duration_label": "Duration of Each Segment (seconds):",
+    "prop_splitter_add_pair_button": "+ Add Folder Pair",
+    "prop_splitter_folder_pairs_label": "Folder Pairs (Source -> Output)"
+}

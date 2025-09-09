@@ -1,0 +1,45 @@
+{
+    "id": "manual_approval_module",
+    "name": "Manual Approval",
+    "version": "1.1",
+    "icon_file": "icon.GIF",
+    "author": "Flowork Contributor",
+    "email": "Contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Pauses the workflow and displays a popup message for user interaction.",
+    "type": "ACTION",
+    "entry_point": "processor.ManualApprovalModule",
+    "tier": "free",
+    "requires_input": true,
+    "properties": [
+        {
+            "id": "approval_message",
+            "type": "string",
+            "label": "Approval Message",
+            "default": "Are you sure you want to continue with this process?",
+            "description": "Text to display in the approval popup."
+        }
+    ],
+    "output_ports": [
+        {
+            "name": "APPROVED",
+            "display_name": "APPROVED"
+        },
+        {
+            "name": "REJECTED",
+            "display_name": "REJECTED"
+        }
+    ],
+    "requires_services": [
+        "logger",
+        "kernel",
+        "loc"
+    ],
+    "permissions": [
+        "ui_interaction"
+    ],
+    "display_properties": {
+        "color": "#8E44AD",
+        "text_color": "#FFFFFF"
+    }
+}

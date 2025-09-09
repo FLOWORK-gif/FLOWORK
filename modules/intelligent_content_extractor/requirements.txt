@@ -1,0 +1,4 @@
+beautifulsoup4>=4.13.4,<5.0.0
+selenium>=4.34.2,<5.0.0
+ttkbootstrap>=1.14.1,<2.0.0
+webdriver-manager>=4.0.2,<5.0.0

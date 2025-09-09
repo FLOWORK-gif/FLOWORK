@@ -1,0 +1,4 @@
+{
+    "widget_prompt_sender_name": "Prompt Sender",
+    "widget_prompt_sender_desc": "A dashboard widget to send a text prompt and an optional file path to a specific receiver module in a workflow."
+}

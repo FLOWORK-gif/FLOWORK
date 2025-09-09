@@ -1,0 +1,15 @@
+{
+    "module_name": "Telegram Sender",
+    "prop_chat_id_source_label": "Chat ID Source",
+    "prop_manual_chat_id_label": "Chat ID (Manual):",
+    "prop_dynamic_chat_id_label": "Get Chat ID from Variable:",
+    "prop_content_source_label": "Content Source",
+    "prop_manual_content_label": "Message Content (Manual):",
+    "prop_dynamic_content_label": "Get Message Content from Variable:",
+    "prop_file_path_label": "Attachment File Path (from Variable):",
+    "prop_mode_manual": "Manual Input",
+    "prop_mode_dynamic": "From Payload Variable",
+    "prop_telegram_info_text": "This module uses the TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID from your global Settings. You can optionally override the recipient below.",
+    "prop_recipient_override_title": "Recipient Override (Optional)",
+    "prop_recipient_override_label": "Get Recipient from Variable:"
+}

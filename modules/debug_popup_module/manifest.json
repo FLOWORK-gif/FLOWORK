@@ -1,0 +1,21 @@
+{
+    "id": "debug_popup_module",
+    "name": "POPUP DEBUGING",
+    "version": "1.1",
+    "icon_file": "icon.png",
+    "author": "AWENK AUDICO",
+    "email": "Contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description_key": "module_debug_popup_desc",
+    "type": "LOGIC",
+    "entry_point": "processor.DebugPopupModule",
+    "tier": "free",
+    "properties": [],
+    "permissions": [
+        "ui_interaction"
+    ],
+    "requires_services": [
+        "logger",
+        "kernel"
+    ]
+}

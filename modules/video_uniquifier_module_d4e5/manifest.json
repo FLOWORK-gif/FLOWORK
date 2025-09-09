@@ -1,0 +1,107 @@
+{
+    "id": "video_uniquifier_module_d4e5",
+    "name": "Video Uniquifier",
+    "version": "1.0",
+    "icon_file": "icon.png",
+    "author": "awenk audico",
+    "email": "sahidinaola@gmail.com",
+    "website": "https://github.com/FLOWORK-gif/FLOWORK",
+    "description": "Applies various random visual modifications to video clips in a folder to make each file unique and avoid duplicate content detection by platforms like TikTok.",
+    "type": "ACTION",
+    "entry_point": "processor.VideoUniquifierModule",
+    "tier": "basic",
+    "behaviors": [
+        "retry",
+        "loop"
+    ],
+    "requires_services": [
+        "logger",
+        "loc",
+        "kernel"
+    ],
+    "properties": [
+        {
+            "id": "source_folder",
+            "type": "folderpath",
+            "label": "loc.prop_source_folder_label",
+            "description": "Folder containing the original video clips to be modified."
+        },
+        {
+            "id": "output_folder",
+            "type": "folderpath",
+            "label": "loc.prop_output_folder_label",
+            "description": "Folder where the unique, modified video clips will be saved."
+        },
+        {
+            "id": "enable_crop",
+            "type": "boolean",
+            "label": "loc.prop_enable_crop_label",
+            "default": true
+        },
+        {
+            "id": "crop_amount_px",
+            "type": "integer",
+            "label": "loc.prop_crop_amount_label",
+            "default": 2
+        },
+        {
+            "id": "enable_color_change",
+            "type": "boolean",
+            "label": "loc.prop_enable_color_label",
+            "default": true
+        },
+        {
+            "id": "color_variation_percent",
+            "type": "integer",
+            "label": "loc.prop_color_variation_label",
+            "default": 1
+        },
+        {
+            "id": "enable_flip",
+            "type": "boolean",
+            "label": "loc.prop_enable_flip_label",
+            "default": true
+        },
+        {
+            "id": "enable_noise",
+            "type": "boolean",
+            "label": "loc.prop_enable_noise_label",
+            "default": true
+        },
+        {
+            "id": "noise_amount",
+            "type": "float",
+            "label": "loc.prop_noise_amount_label",
+            "default": 0.02
+        },
+        {
+            "id": "output_format",
+            "type": "enum",
+            "label": "loc.prop_output_format_label",
+            "options": ["mp4", "mov"],
+            "default": "mp4"
+        }
+    ],
+    "output_ports": [
+        {
+            "name": "success",
+            "display_name": "Success"
+        },
+        {
+            "name": "error",
+            "display_name": "Error"
+        }
+    ],
+    "output_schema": [
+        {
+            "name": "data.processed_files",
+            "type": "list",
+            "description": "A list of full paths to the newly created unique video files."
+        },
+        {
+            "name": "data.total_processed",
+            "type": "integer",
+            "description": "The total number of videos processed."
+        }
+    ]
+}

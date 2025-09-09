@@ -1,0 +1,6 @@
+{
+    "module_name": "Popup Pemutar Video",
+    "vlc_not_found_error": "Error: Library python-vlc tidak ditemukan!\nJalankan 'poetry add python-vlc' di terminal Anda.",
+    "prop_input_settings_label": "Pengaturan Input",
+    "prop_video_path_variable_label": "Ambil Path Video dari Variabel:"
+}

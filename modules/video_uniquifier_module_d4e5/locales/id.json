@@ -1,0 +1,17 @@
+{
+    "module_name": "Video Uniquifier (Anti-Banned)",
+    "prop_folders_title": "Konfigurasi Folder",
+    "prop_source_folder_label": "Folder Sumber:",
+    "prop_output_folder_label": "Folder Hasil (opsional, default di subfolder):",
+    "prop_mods_title": "Pengaturan Modifikasi",
+    "prop_enable_crop_label": "Aktifkan Crop Acak",
+    "prop_crop_amount_label": "Jumlah Crop Maks:",
+    "prop_pixels_label": "piksel",
+    "prop_enable_color_label": "Aktifkan Perubahan Warna Acak",
+    "prop_color_variation_label": "Variasi Warna Maks:",
+    "prop_enable_flip_label": "Aktifkan Flip Horizontal Acak (peluang 50%)",
+    "prop_enable_noise_label": "Aktifkan Noise/Bintik Acak Halus",
+    "prop_noise_amount_label": "Intensitas Noise:",
+    "prop_output_opts_title": "Opsi Output",
+    "prop_output_format_label": "Format Output:"
+}

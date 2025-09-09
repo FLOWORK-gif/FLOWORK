@@ -1,0 +1,62 @@
+{
+    "id": "telegram_sender_module",
+    "name": "Telegram Sender",
+    "version": "1.1",
+    "author": "AWENK AUDICO & Partner Coding",
+    "description": "Sends a message (text, photo, audio, or document) to a specified Telegram chat. Uses global variables for credentials and default chat ID.",
+    "type": "ACTION",
+    "tier": "basic",
+    "entry_point": "processor.TelegramSenderModule",
+    "behaviors": ["retry"],
+    "requires_services": [
+        "logger",
+        "loc",
+        "kernel",
+        "variable_manager_service"
+    ],
+    "properties": [
+        {
+            "id": "recipient_override_variable",
+            "type": "string",
+            "label": "loc.prop_recipient_override_label",
+            "description": "Optional. Payload variable containing a Chat ID to override the global setting.",
+            "default": ""
+        },
+        {
+            "id": "content_source",
+            "type": "enum",
+            "options": ["manual", "dynamic"],
+            "default": "dynamic",
+            "label": "loc.prop_content_source_label"
+        },
+        {
+            "id": "manual_content",
+            "type": "textarea",
+            "label": "loc.prop_manual_content_label"
+        },
+        {
+            "id": "dynamic_content_variable",
+            "type": "string",
+            "label": "loc.prop_dynamic_content_label",
+            "default": "data.message"
+        },
+        {
+            "id": "file_path_variable",
+            "type": "string",
+            "label": "loc.prop_file_path_label",
+            "description": "Optional. Payload variable containing the full path to a photo, audio, or document to send.",
+            "default": "data.file_path"
+        }
+    ],
+    "output_ports": [
+        {"name": "success", "display_name": "Success"},
+        {"name": "error", "display_name": "Error"}
+    ],
+    "output_schema": [
+        {
+            "name": "data.telegram_message_id",
+            "type": "integer",
+            "description": "The unique ID of the message that was successfully sent."
+        }
+    ]
+}

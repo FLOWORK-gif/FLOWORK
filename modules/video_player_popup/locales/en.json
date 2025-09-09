@@ -1,0 +1,6 @@
+{
+    "module_name": "Video Player Popup",
+    "vlc_not_found_error": "Error: python-vlc library not found!\nRun 'poetry add python-vlc' in your terminal.",
+    "prop_input_settings_label": "Input Settings",
+    "prop_video_path_variable_label": "Get Video Path from Variable:"
+}

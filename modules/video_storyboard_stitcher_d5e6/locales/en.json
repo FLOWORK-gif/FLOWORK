@@ -1,0 +1,21 @@
+{
+    "module_name": "Video Storyboard Stitcher",
+    "prop_storyboard_output_label": "Output Settings",
+    "prop_storyboard_output_folder_label": "Output Folder:",
+    "prop_storyboard_output_prefix_label": "Output Filename Prefix:",
+    "prop_storyboard_bg_music_label": "Background Music (DEPRECATED - Use Folder):",
+    "prop_storyboard_music_volume_label": "New Music Volume (%):",
+    "prop_storyboard_sections_label": "Video Sections / Storyboard",
+    "prop_storyboard_section_name_label": "Section Name:",
+    "prop_storyboard_add_section_button": "+ Add Section",
+    "prop_storyboard_generation_mode_label": "Video Generation Mode:",
+    "mode_match_largest": "Maximize Quantity (Loop shorter clips)",
+    "mode_limit_by_smallest": "Preserve Uniqueness (Limit by smallest folder)",
+    "prop_stitcher_delete_after_use_label": "Delete clips after use",
+    "prop_storyboard_section_default_name": "Act",
+    "prop_storyboard_music_folder_label": "Background Music Folder (Optional):",
+    "prop_storyboard_original_audio_mode_label": "Original Clip Audio:",
+    "audio_mode_replace": "Replace",
+    "audio_mode_merge": "Merge with BGM",
+    "prop_storyboard_original_audio_volume_label": "Original Audio Volume (%):"
+}

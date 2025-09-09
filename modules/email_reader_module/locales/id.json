@@ -1,0 +1,19 @@
+{
+    "module_name": "Pembaca Email (IMAP)",
+    "prop_email_reader_creds_title": "Kredensial IMAP (dari Variabel Global)",
+    "prop_email_reader_creds_info": "CATATAN: Modul ini secara otomatis menggunakan variabel IMAP_HOST, EMAIL_ADDRESS, dan EMAIL_PASSWORD dari Pengaturan > Manajemen Variabel.",
+    "prop_email_reader_search_title": "Kriteria Pencarian",
+    "prop_email_reader_from_label": "Email Dari Mengandung:",
+    "prop_email_reader_subject_label": "Subjek Mengandung:",
+    "prop_email_reader_options_title": "Aksi Setelah Membaca",
+    "prop_email_reader_mark_read_label": "Tandai email sebagai sudah dibaca setelah diproses",
+    "prop_email_reader_delete_label": "Hapus email setelah diproses",
+    "prop_email_from_source": "Sumber Pengirim",
+    "prop_email_subject_source": "Sumber Subjek",
+    "prop_mode_manual": "Input Manual",
+    "prop_mode_dynamic": "Dari Variabel Payload",
+    "prop_path_input_key_label": "Ambil nilai dari variabel:",
+    "port_success": "Sukses",
+    "port_not_found": "Tidak Ditemukan",
+    "port_error": "Error"
+}

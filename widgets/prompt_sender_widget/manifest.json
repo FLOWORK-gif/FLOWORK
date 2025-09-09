@@ -1,0 +1,14 @@
+{
+    "id": "prompt_sender_widget",
+    "name": "PROMPT SENDER",
+    "version": "1.0",
+    "icon_file": "icon.png",
+    "author": "AWENK AUDICO",
+    "email": "sahidinaola@gmail.com",
+    "website": "www.teetah.art",
+    "description_key": "widget_prompt_sender_desc",
+    "type": "DASHBOARD_WIDGET",
+    "entry_point": "processor.PromptSenderWidget",
+    "tier": "free",
+    "is_system": false
+}

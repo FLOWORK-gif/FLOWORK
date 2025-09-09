@@ -1,0 +1,23 @@
+{
+    "prop_stitcher_job_list_label": "Daftar Pekerjaan Batch",
+    "prop_stitcher_add_job_button": "+ Tambah Pekerjaan",
+    "prop_stitcher_video_folder_header": "Folder Sumber Video",
+    "prop_stitcher_audio_folder_header": "Folder Sumber Audio",
+    "prop_stitcher_output_folder_header": "Folder Hasil",
+    "prop_stitcher_add_subtitles_label": "Buat & Bakar Subtitle Otomatis (AI)",
+    "prop_stitcher_subtitle_settings_label": "Pengaturan Subtitle",
+    "prop_stitcher_subtitle_model_size_label": "Model AI Subtitle:",
+    "prop_stitcher_subtitle_effect_label": "Efek Subtitle:",
+    "prop_stitcher_subtitle_font_label": "Jenis Font Subtitle:",
+    "prop_stitcher_subtitle_font_size_label": "Ukuran Font:",
+    "prop_stitcher_subtitle_primary_color_label": "Warna Utama:",
+    "prop_stitcher_subtitle_secondary_color_label": "Warna Highlight:",
+    "prop_stitcher_subtitle_style_label": "Gaya Font:",
+     "prop_stitcher_duration_reference_label": "Duration Reference Mode:",
+    "duration_ref_audio": "Audio as Master",
+    "duration_ref_video": "Video as Master",
+    "prop_stitcher_original_audio_mode_label": "Original Video Audio:",
+    "audio_mode_replace": "Replace with New Audio",
+    "audio_mode_merge": "Merge with New Audio",
+    "prop_stitcher_original_audio_volume_label": "Original Audio Volume (%):"
+}

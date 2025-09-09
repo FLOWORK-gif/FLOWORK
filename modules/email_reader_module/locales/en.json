@@ -1,0 +1,19 @@
+{
+    "module_name": "Email Reader (IMAP)",
+    "prop_email_reader_creds_title": "IMAP Credentials (from Global Variables)",
+    "prop_email_reader_creds_info": "NOTE: This module automatically uses the IMAP_HOST, EMAIL_ADDRESS, and EMAIL_PASSWORD variables from Settings > Variable Management.",
+    "prop_email_reader_search_title": "Search Criteria",
+    "prop_email_reader_from_label": "From Email Contains:",
+    "prop_email_reader_subject_label": "Subject Contains:",
+    "prop_email_reader_options_title": "Post-Read Actions",
+    "prop_email_reader_mark_read_label": "Mark email as read after processing",
+    "prop_email_reader_delete_label": "Delete email after processing",
+    "prop_email_from_source": "Sender Source",
+    "prop_email_subject_source": "Subject Source",
+    "prop_mode_manual": "Manual Input",
+    "prop_mode_dynamic": "From Payload Variable",
+    "prop_path_input_key_label": "Get value from variable:",
+    "port_success": "Success",
+    "port_not_found": "Not Found",
+    "port_error": "Error"
+}

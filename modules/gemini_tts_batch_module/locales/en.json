@@ -1,0 +1,12 @@
+{
+    "module_name": "Gemini TTS (Batch)",
+    "prop_tts_input_source_label": "Input Data Source:",
+    "prop_tts_source_csv_label": "Source CSV File (for CSV mode)",
+    "prop_tts_payload_variable_label": "Payload Variable (for Payload mode)",
+    "prop_tts_text_column_label": "Text Column/Key Name:",
+    "prop_tts_status_column_label": "Status Column Name (CSV mode only):",
+    "prop_tts_output_folder_label": "Output Folder for Audio",
+    "prop_tts_voice_model_label": "Voice Model:",
+    "input_mode_csv": "From CSV File",
+    "input_mode_payload": "From Payload"
+}

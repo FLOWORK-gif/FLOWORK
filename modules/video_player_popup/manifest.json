@@ -1,0 +1,26 @@
+{
+    "id": "video_player_popup_d7e4",
+    "name": "Video Player Popup",
+    "version": "1.0",
+    "icon_file": "icon.png",
+    "author": "Flowork Contributor",
+    "email": "contributor@teetah.art",
+    "website": "www.teetah.art",
+    "description": "Displays a video from a previous module's payload in a popup window.",
+    "type": "ACTION",
+    "entry_point": "processor.VideoPlayerPopupModule",
+    "tier": "free",
+    "behaviors": [],
+    "requires_services": ["logger", "loc", "kernel"],
+    "properties": [
+        {
+            "id": "video_path_variable",
+            "type": "string",
+            "label": "loc.prop_video_path_variable_label"
+        }
+    ],
+    "output_ports": [
+        {"name": "success", "display_name": "Success"},
+        {"name": "error", "display_name": "Error"}
+    ]
+}
